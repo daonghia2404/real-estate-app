@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Real Estate App</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="container"> 
+        <div class="header-wrapper d-flex align-items-center justify-content-between"> 
+          <div class="header-item d-flex align-items-center"> 
+            <div class="header-icon"> <img src="./assets/icons/icon-facebook-white.svg" alt=""></div>
+            <div class="header-icon" style="margin: 0;"><img src="./assets/icons/icon-messenger-white.svg" alt=""></div>
+            <div class="line"> </div><a href="mailto: contact@anphatland.com">Contact@anphatland.com</a>
+          </div>
+          <div class="header-item d-flex align-items-center"> 
+            <div class="header-wishlists d-flex align-items-center"> 
+              <div class="header-icon"><img src="./assets/icons/icon-heart-white.svg" alt=""></div>
+              <p class="wishlists-value">Wishlists (0)</p>
+            </div>
+            <div class="line"> </div>
+            <div class="header-language d-flex align-items-center"> 
+              <div class="header-icon"> <img src="./assets/images/image-flag-vietnam.png" alt=""></div>
+              <p class="language-value">Tiếng Việt</p>
+            </div>
+            <div class="header-login d-flex align-items-center"> 
+              <div class="header-icon"> <img src="./assets/icons/icon-logout-white.svg" alt=""></div>
+              <p class="language-value">Login</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="header-nav">
+      <div class="container"> 
+        <div class="header-wrapper d-flex align-items-center justify-content-between"> 
+          <div class="header-item"> 
+            <div class="header-logo"> <img src="./assets/images/logo.svg" alt=""></div>
+          </div>
+          <div class="header-item">
+            <div class="header-btn-mobile"> <img src="./assets/icons/icon-bar-blue.svg" alt=""></div>
+            <div class="header-menu-wrapper d-flex align-items-center">
+              <div class="header-nav d-flex align-items-center"><a class="nav-item" href="#">Projects</a><a class="nav-item" href="#">Properties</a><a class="nav-item" href="#">News</a><a class="nav-item" href="#">Careers</a><a class="nav-item" href="#">Contact</a>
+              </div>
+                  <button class="button-component d-flex align-items-center justify-content-center secondary"><img class="button-icon" src="./assets/icons/icon-plus-white.svg" alt=""><span class="button-title">Add Properties</span>
+                  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section-banner"> 
+      <div class="banner-background"> <img src="./assets/images/image-sample-banner.png" alt=""></div>
+      <div class="banner-overlay"> </div>
+      <div class="banner-search-wrapper"> 
+        <h2 class="banner-title">Bạn muốn tìm gì ?</h2>
+        <form class="search-form d-flex align-items-center" action="#">
+          <div class="search-icon"> <img src="./assets/icons/icon-search-orange.svg" alt=""></div>
+          <input type="text" placeholder="Gõ từ khoá bạn muốn tìm kiếm">
+          <div class="seach-advanced d-flex align-items-center"> 
+            <p>Tìm kiếm nâng cao</p><img src="./assets/icons/icon-caret-down-gray.svg" alt="">
+            <div class="advanced-setting-wrapper d-flex align-items-center justify-content-between">
+              <div class="form-group select">
+                <div class="form-item">
+                  <select class="custom-select">
+                    <option value="#">Loại dự án</option>
+                    <option value="#">Loại dự án 1</option>
+                    <option value="#">Loại dự án 2</option>
+                    <option value="#">Loại dự án 3</option>
+                    <option value="#">Loại dự án 4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group input">
+                <div class="form-item">
+                  <input type="text" placeholder="Khoảng giá">
+                </div>
+              </div>
+            </div>
+          </div>
+              <button class="button-component d-flex align-items-center justify-content-center primary"><span class="button-title">Tìm kiếm</span>
+              </button>
+        </form>
+      </div>
+    </section>
+    <section class="section section-home-carousel" style="padding-bottom: 0;">
+      <div class="container"> 
+        <div class="section-header">
+          <h2 class="section-title">Featured projects</h2>
+          <p class="section-des">We make the best choices with the hottest and most prestigious projects, please visit the details below to find out more</p>
+        </div>
+      </div>
+      <div class="section-home-carousel-wrapper">
+        <div class="owl-carousel custom-style-carousel" id="section-home-carousel">
+          <div class="item"> 
+            <div class="home-carousel-item"> 
+              <div class="item-background"> <img src="./assets/images/image-sample-box.png" alt=""></div>
+              <div class="item-overlay"></div>
+              <div class="item-content"> 
+                <div class="item-icon"> <img src="./assets/icons/icon-youtube-white.svg" alt=""></div><a class="item-title" href="#">HATAY MILLENNIUM</a>
+                <p class="item-des">Tòa tháp thiên niên kỷ Hatay Millennnium là dự án căn hộ chung cư tọa lạc tại Số 4 đường Quang Trung, phường Yết Kiêu, quận Hà Đông, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="home-carousel-item"> 
+              <div class="item-background"> <img src="./assets/images/image-sample-box.png" alt=""></div>
+              <div class="item-overlay"></div>
+              <div class="item-content"> 
+                <div class="item-icon"> <img src="./assets/icons/icon-youtube-white.svg" alt=""></div><a class="item-title" href="#">HATAY MILLENNIUM</a>
+                <p class="item-des">Tòa tháp thiên niên kỷ Hatay Millennnium là dự án căn hộ chung cư tọa lạc tại Số 4 đường Quang Trung, phường Yết Kiêu, quận Hà Đông, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="home-carousel-item"> 
+              <div class="item-background"> <img src="./assets/images/image-sample-box.png" alt=""></div>
+              <div class="item-overlay"></div>
+              <div class="item-content"> 
+                <div class="item-icon"> <img src="./assets/icons/icon-youtube-white.svg" alt=""></div><a class="item-title" href="#">HATAY MILLENNIUM</a>
+                <p class="item-des">Tòa tháp thiên niên kỷ Hatay Millennnium là dự án căn hộ chung cư tọa lạc tại Số 4 đường Quang Trung, phường Yết Kiêu, quận Hà Đông, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="home-carousel-item"> 
+              <div class="item-background"> <img src="./assets/images/image-sample-box.png" alt=""></div>
+              <div class="item-overlay"></div>
+              <div class="item-content"> 
+                <div class="item-icon"> <img src="./assets/icons/icon-youtube-white.svg" alt=""></div><a class="item-title" href="#">HATAY MILLENNIUM</a>
+                <p class="item-des">Tòa tháp thiên niên kỷ Hatay Millennnium là dự án căn hộ chung cư tọa lạc tại Số 4 đường Quang Trung, phường Yết Kiêu, quận Hà Đông, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="home-carousel-item"> 
+              <div class="item-background"> <img src="./assets/images/image-sample-box.png" alt=""></div>
+              <div class="item-overlay"></div>
+              <div class="item-content"> 
+                <div class="item-icon"> <img src="./assets/icons/icon-youtube-white.svg" alt=""></div><a class="item-title" href="#">HATAY MILLENNIUM</a>
+                <p class="item-des">Tòa tháp thiên niên kỷ Hatay Millennnium là dự án căn hộ chung cư tọa lạc tại Số 4 đường Quang Trung, phường Yết Kiêu, quận Hà Đông, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+          <div class="item"> 
+            <div class="home-carousel-item"> 
+              <div class="item-background"> <img src="./assets/images/image-sample-box.png" alt=""></div>
+              <div class="item-overlay"></div>
+              <div class="item-content"> 
+                <div class="item-icon"> <img src="./assets/icons/icon-youtube-white.svg" alt=""></div><a class="item-title" href="#">HATAY MILLENNIUM</a>
+                <p class="item-des">Tòa tháp thiên niên kỷ Hatay Millennnium là dự án căn hộ chung cư tọa lạc tại Số 4 đường Quang Trung, phường Yết Kiêu, quận Hà Đông, Hà Nội</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        <section class="section section-product-box"> 
+          <div class="container"> 
+            <div class="section-header">
+              <h2 class="section-title"></h2>
+              <p class="section-des"></p>
+            </div>
+            <div class="section-main"> 
+              <div class="row"> 
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt="">
+                          <div class="product-overlay"></div>
+                          <div class="product-overlay-content"> 
+                            <h6 class="content-title">Đang mở bán</h6>
+                            <p class="content-des">Thanh toán 30% nhận nhà</p>
+                          </div></a><a class="product-title" href="#">Sunshine Garden City</a>
+                        <p class="product-des">Đào Duy Anh, Gò Vấp, TP.HCM</p>
+                        <div class="product-tags d-flex flex-wrap"> 
+                          <div class="tag-item">Giá: <span>53 - 62 tr / m</span></div>
+                          <div class="tag-item">Giao nhà: <span>03/2025</span></div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt="">
+                          <div class="product-overlay"></div>
+                          <div class="product-overlay-content"> 
+                            <h6 class="content-title">Đang mở bán</h6>
+                            <p class="content-des">Thanh toán 30% nhận nhà</p>
+                          </div></a><a class="product-title" href="#">Sunshine Garden City</a>
+                        <p class="product-des">Đào Duy Anh, Gò Vấp, TP.HCM</p>
+                        <div class="product-tags d-flex flex-wrap"> 
+                          <div class="tag-item">Giá: <span>53 - 62 tr / m</span></div>
+                          <div class="tag-item">Giao nhà: <span>03/2025</span></div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt="">
+                          <div class="product-overlay"></div>
+                          <div class="product-overlay-content"> 
+                            <h6 class="content-title">Đang mở bán</h6>
+                            <p class="content-des">Thanh toán 30% nhận nhà</p>
+                          </div></a><a class="product-title" href="#">Sunshine Garden City</a>
+                        <p class="product-des">Đào Duy Anh, Gò Vấp, TP.HCM</p>
+                        <div class="product-tags d-flex flex-wrap"> 
+                          <div class="tag-item">Giá: <span>53 - 62 tr / m</span></div>
+                          <div class="tag-item">Giao nhà: <span>03/2025</span></div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt="">
+                          <div class="product-overlay"></div>
+                          <div class="product-overlay-content"> 
+                            <h6 class="content-title">Đang mở bán</h6>
+                            <p class="content-des">Thanh toán 30% nhận nhà</p>
+                          </div></a><a class="product-title" href="#">Sunshine Garden City</a>
+                        <p class="product-des">Đào Duy Anh, Gò Vấp, TP.HCM</p>
+                        <div class="product-tags d-flex flex-wrap"> 
+                          <div class="tag-item">Giá: <span>53 - 62 tr / m</span></div>
+                          <div class="tag-item">Giao nhà: <span>03/2025</span></div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt="">
+                          <div class="product-overlay"></div>
+                          <div class="product-overlay-content"> 
+                            <h6 class="content-title">Đang mở bán</h6>
+                            <p class="content-des">Thanh toán 30% nhận nhà</p>
+                          </div></a><a class="product-title" href="#">Sunshine Garden City</a>
+                        <p class="product-des">Đào Duy Anh, Gò Vấp, TP.HCM</p>
+                        <div class="product-tags d-flex flex-wrap"> 
+                          <div class="tag-item">Giá: <span>53 - 62 tr / m</span></div>
+                          <div class="tag-item">Giao nhà: <span>03/2025</span></div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt="">
+                          <div class="product-overlay"></div>
+                          <div class="product-overlay-content"> 
+                            <h6 class="content-title">Đang mở bán</h6>
+                            <p class="content-des">Thanh toán 30% nhận nhà</p>
+                          </div></a><a class="product-title" href="#">Sunshine Garden City</a>
+                        <p class="product-des">Đào Duy Anh, Gò Vấp, TP.HCM</p>
+                        <div class="product-tags d-flex flex-wrap"> 
+                          <div class="tag-item">Giá: <span>53 - 62 tr / m</span></div>
+                          <div class="tag-item">Giao nhà: <span>03/2025</span></div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-product-box"> 
+          <div class="container"> 
+            <div class="section-header">
+              <h2 class="section-title">News</h2>
+              <p class="section-des">Below is the latest real estate news we get regularly updated from reliable sources.</p>
+            </div>
+            <div class="section-main"> 
+              <div class="row"> 
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt=""></a><a class="product-title" href="#">S. Korea’s Big Investors Flocking to Overseas Real Estate</a>
+                        <p class="product-des">18 Nov, 2019</p>
+                        <p class="product-content">An increasing number of South Korean investors are getting interested in real estate in foreign countries, especially the United States and Japan where regulations are relatively lax and property values are stable.</p>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt=""></a><a class="product-title" href="#">S. Korea’s Big Investors Flocking to Overseas Real Estate</a>
+                        <p class="product-des">18 Nov, 2019</p>
+                        <p class="product-content">An increasing number of South Korean investors are getting interested in real estate in foreign countries, especially the United States and Japan where regulations are relatively lax and property values are stable.</p>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt=""></a><a class="product-title" href="#">S. Korea’s Big Investors Flocking to Overseas Real Estate</a>
+                        <p class="product-des">18 Nov, 2019</p>
+                        <p class="product-content">An increasing number of South Korean investors are getting interested in real estate in foreign countries, especially the United States and Japan where regulations are relatively lax and property values are stable.</p>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-product-box"> 
+          <div class="container"> 
+            <div class="section-header">
+              <h2 class="section-title">Recruit</h2>
+              <p class="section-des">Below is the latest real estate news we get regularly updated from reliable sources.</p>
+            </div>
+            <div class="section-main"> 
+              <div class="row"> 
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt=""></a><a class="product-title" href="#">S. Korea’s Big Investors Flocking to Overseas Real Estate</a>
+                        <p class="product-des">18 Nov, 2019</p>
+                        <p class="product-content">An increasing number of South Korean investors are getting interested in real estate in foreign countries, especially the United States and Japan where regulations are relatively lax and property values are stable.</p>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt=""></a><a class="product-title" href="#">S. Korea’s Big Investors Flocking to Overseas Real Estate</a>
+                        <p class="product-des">18 Nov, 2019</p>
+                        <p class="product-content">An increasing number of South Korean investors are getting interested in real estate in foreign countries, especially the United States and Japan where regulations are relatively lax and property values are stable.</p>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                      <div class="product-box-component"> <a class="product-image" href="#"> <img src="./assets/images/image-sample-box.png" alt=""></a><a class="product-title" href="#">S. Korea’s Big Investors Flocking to Overseas Real Estate</a>
+                        <p class="product-des">18 Nov, 2019</p>
+                        <p class="product-content">An increasing number of South Korean investors are getting interested in real estate in foreign countries, especially the United States and Japan where regulations are relatively lax and property values are stable.</p>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer-wrapper"> 
+          <div class="row"> 
+            <div class="col-lg-5 col-sm-6 footer-col"><a class="footer-logo" href="#"><img src="./assets/images/logo-square.png" alt=""></a>
+              <div class="footer-infomation"> <a class="infomation-item d-flex align-items-center" href="#"> <img src="./assets/icons/icon-location-blue.svg" alt="">North Link Building, 10 Admiralty Street, 757695 Singapore</a><a class="infomation-item d-flex align-items-center" href="to: 18006268"> <img src="./assets/icons/icon-phone-blue.svg" alt="">Hotline: 1800 6268</a><a class="infomation-item d-flex align-items-center" href="mailto: contact@anphatland.com"> <img src="./assets/icons/icon-mail-blue.svg" alt="">Email:  contact@flex-home.com</a></div>
+            </div>
+            <div class="col-lg-2 col-sm-6 footer-col">
+              <h4 class="footer-title">About</h4>
+              <div class="footer-lists"><a class="list-item" href="#">About us</a><a class="list-item" href="#">Contact us</a><a class="list-item" href="#">Careers</a><a class="list-item" href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 footer-col">
+              <h4 class="footer-title">MORE INFORMATION</h4>
+              <div class="footer-lists"><a class="list-item" href="#">All projects</a><a class="list-item" href="#">All properties</a><a class="list-item" href="#">Houses for sale</a><a class="list-item" href="#">Houses for rent</a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 footer-col">
+              <h4 class="footer-title">NEWS</h4>
+              <div class="footer-lists"><a class="list-item" href="#">Latest news</a><a class="list-item" href="#">House architecture</a><a class="list-item" href="#">House design</a><a class="list-item" href="#">Building materials</a>
+              </div>
+            </div>
+            <div class="col-12"> 
+              <div class="footer-bottom"> 
+                <p>© 2020 Flex Home is Proudly Powered by Botble Team</p>
+                <div class="footer-btn-group d-flex align-items-center"> <a class="secondary button-component d-flex align-items-center justify-content-center" href="#"><img class="button-icon" src="./assets/icons/icon-phone-white.svg" alt=""><span class="button-title">1900 9669</span></a><a class="messenger button-component d-flex align-items-center justify-content-center" href="#"><img class="button-icon" src="./assets/icons/icon-messenger-white.svg" alt=""><span class="button-title">Messenger</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"> </script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
