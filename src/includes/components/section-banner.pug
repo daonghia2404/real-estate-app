@@ -1,0 +1,30 @@
+include button.pug
+
+section.section-banner 
+  .banner-background 
+    img(src="./assets/images/image-sample-banner.png", alt="")
+  .banner-overlay 
+  .banner-search-wrapper 
+    h2.banner-title Bạn muốn tìm gì ?
+    form(action="#").search-form.d-flex.align-items-center
+      .search-icon 
+        img(src="./assets/icons/icon-search-orange.svg", alt="")
+      input(type="text" placeholder="Gõ từ khoá bạn muốn tìm kiếm")
+      .seach-advanced.d-flex.align-items-center 
+        p Tìm kiếm nâng cao
+        img(src="./assets/icons/icon-caret-down-gray.svg", alt="")
+        .advanced-setting-wrapper.d-flex.align-items-center.justify-content-between
+          .form-group.select
+            .form-item
+              select.custom-select
+                option(value="#") Loại dự án
+                option(value="#") Loại dự án 1
+                option(value="#") Loại dự án 2
+                option(value="#") Loại dự án 3
+                option(value="#") Loại dự án 4
+
+          .form-group.input
+            .form-item
+              input(type="text" placeholder="Khoảng giá")
+
+      +button('button', 'Tìm kiếm', '', 'primary')

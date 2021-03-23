@@ -1,0 +1,28 @@
+nav.header-nav-dark.d-flex.flex-column
+  .nav-back.d-flex.align-items-center
+    a(href="#").nav-back-icon 
+      img(src="./assets/icons/icon-angle-left-blue.svg", alt="")
+    a(href="#").nav-text danh sách dự án
+  .nav-square
+
+  p.nav-text.text-center Kênh tra cứu thông tin trực tuyến Dự án Metropolis
+
+  .line
+
+  .nav-link-wrapper 
+    each item, index in ['Về dự án','Mặt bằng','nội thất bàn giao','bảng giá trực tuyến','vinhomes trực tuyến','biểu đồ tỷ lệ chạy hàng','tin tức sự kiện','chính sách bán hàng','thư viện ảnh']
+      a(href="#" class=`${index === 0 ? 'active' : ''}`).nav-link-item.nav-text= item
+
+  .line
+
+  .nav-download-wrapper 
+    .download-icon 
+      img(src="./assets/icons/icon-download-blue.svg", alt="")
+    p.nav-text tài xuống mẫu văn bản pháp lý
+
+  .nav-copyright 
+    .copyright-logo 
+      img(src="./assets/images/logo-anphatland.png", alt="")
+    p 
+      |Copyright © 2017 anphatland.com.vn 
+      span Design by hoangnoahz

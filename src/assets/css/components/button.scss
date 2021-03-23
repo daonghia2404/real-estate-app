@@ -1,0 +1,51 @@
+.button-component {
+  width: auto;
+  height: auto;
+  border: 1px solid transparent;
+  font-size: 15px;
+  padding: 7px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+
+  .button-icon {
+    width: 15px;
+    margin-right: 10px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &.secondary {
+    background: $secondary;
+    color: $white;
+    &:hover {
+      background: darken($secondary, 5%);
+    }
+  }
+
+  &.primary {
+    background: $primary;
+    color: $white;
+    &:hover {
+      background: lighten($primary, 5%);
+    }
+  }
+
+  &.messenger {
+    background: #00B2FF;
+    color: $white;
+    &:hover {
+      background: darken(#00B2FF, 5%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+    padding: 7px 10px;
+    .button-icon {
+      width: 12px;
+    }
+  }
+}

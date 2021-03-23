@@ -1,0 +1,139 @@
+section.section-banner {
+  height: 400px;
+  position: relative;
+  .banner-overlay,
+  .banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-background {
+    z-index: 1;
+    @include centerImage;
+  }
+
+  .banner-overlay {
+    z-index: 2;
+    @include linearGradient(bottom);
+  }
+
+  .banner-search-wrapper {
+    position: relative;
+    z-index: 3;
+    padding: 35px 15px 0;
+    max-width: 630px;
+    margin: 0 auto 0;
+
+    .banner-title {
+      font-size: 28px;
+      font-weight: 400;
+      text-align: center;
+      color: $white;
+      margin-bottom: 35px;
+      @media (max-width: 575px) {
+        font-size: 22px;
+      }
+    }
+    .search-form {
+      position: relative;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      padding: 15px 20px;
+      @media (max-width: 575px) {
+        flex-wrap: wrap;
+      }
+      &.active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        .advanced-setting-wrapper {
+          display: flex !important;
+        }
+        .seach-advanced img {
+          transform: rotate(180deg);
+        }
+      }
+
+      .search-icon {
+        width: 20px;
+        img {
+          width: 100%;
+        }
+      }
+      input {
+        flex: 1;
+        border: none;
+        font-size: 16px;
+        background: transparent;
+        margin: 0 15px;
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+        &::placeholder {
+          color: $gray;
+        }
+      }
+      .seach-advanced {
+        margin-right: 10px;
+        @media (max-width: 575px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+          justify-content: space-between;
+          padding: 10px 0;
+        }
+        cursor: pointer;
+        p {
+          font-style: italic;
+        }
+        img {
+          width: 10px;
+          margin-left: 8px;
+        }
+      }
+      .button-component {
+        @media (max-width: 575px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    .advanced-setting-wrapper {
+      display: none !important;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 0 15px 20px 15px;
+      background: rgba(255,255,255,0.9);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      .form-group {
+        margin-bottom: 0;
+        select, input {
+          height: 45px;
+          border-radius: 12px;
+          background: $input;
+          border: none;
+          width: 100%;
+          margin: 0;
+          padding: 0 12px;
+          font-size: 14px;
+        }
+        select {
+          box-shadow: none;
+          background: $input url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.28125 0C0.59375 0 0.25 0.8125 0.75 1.28125L4.46875 5C4.75 5.3125 5.21875 5.3125 5.53125 5L9.25 1.28125C9.71875 0.8125 9.375 0 8.71875 0H1.28125Z' fill='%234A4A4A'/%3E%3C/svg%3E%0A") right .75rem center/8px 10px no-repeat;
+        }
+        &.select {
+          flex: 0 0 40%;
+          max-width: 40%;
+        }
+        &.input {
+          flex: 0 0 calc(60% - 10px);
+          max-width: calc(60% - 10px);
+        }
+      }
+    }
+  }
+}

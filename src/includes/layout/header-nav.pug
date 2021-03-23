@@ -1,0 +1,41 @@
+include ../components/button.pug
+
+-
+  const dataNavLinks = [
+    {
+      link: '#',
+      title: 'Projects',
+    },
+    {
+      link: '#',
+      title: 'Properties',
+    },
+    {
+      link: '#',
+      title: 'News',
+    },
+    {
+      link: '#',
+      title: 'Careers',
+    },
+    {
+      link: '#',
+      title: 'Contact',
+    },
+  ]
+
+header.header-nav
+  .container 
+    .header-wrapper.d-flex.align-items-center.justify-content-between 
+      .header-item 
+        .header-logo 
+          img(src="./assets/images/logo.svg", alt="") 
+      .header-item
+        .header-btn-mobile 
+          img(src="./assets/icons/icon-bar-blue.svg", alt="")
+        .header-menu-wrapper.d-flex.align-items-center
+          .header-nav.d-flex.align-items-center
+            each item in dataNavLinks
+              a(href=`${item.link}`).nav-item= item.title
+          
+          +button('button', 'Add Properties', './assets/icons/icon-plus-white.svg', 'secondary')

@@ -1,0 +1,124 @@
+.header-nav-dark {
+  position: fixed;
+  top: 48px;
+  height: calc(100vh - 48px);
+  left: 0;
+  width: 240px;
+  background: $nav;
+  overflow: auto;
+  z-index: 11;
+  transition: 0.3s ease;
+  transform: translateX(-100%);
+  .nav-text {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    color: $white;
+  }
+  .nav-back {
+    padding: 0 15px;
+    margin: 30px 0 15px;
+    .nav-back-icon {
+      display: flex;
+      background: $yellow;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      img {
+        width: 8px;
+        margin: auto;
+        transform: translateX(-1px);
+      }
+    }
+  }
+
+  .nav-square {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 100px;
+    @include centerImage;
+    border-bottom: 4px solid $yellow;
+    margin-bottom: 15px;
+  }
+
+  .line {
+    background: rgba(255,255,255,0.09);
+    min-height: 1px;
+    margin: 25px 0;
+  }
+  .nav-link-wrapper {
+    flex: 1;
+    .nav-link-item {
+      padding: 0 15px;
+      transition: 0.3s ease;
+      position: relative;
+      padding: 10px 0px 10px 40px;
+      margin-bottom: 15px;
+      display: block;
+      transition: 0.3s ease;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 28px;
+        height: 12px;
+        background: $yellow;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        opacity: 0;
+        transition: 0.3s ease;
+      }
+      &.active,
+      &:hover {
+        &::before { opacity: 1; }
+        color: $yellow;
+      }
+      &.active {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .nav-download-wrapper {
+    padding: 0 15px;
+    margin-bottom: 25px;
+    .download-icon {
+      background: $yellow;
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 15px;
+      display: flex;
+      cursor: pointer;
+      img {
+        margin: auto;
+        width: 20px;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  .nav-copyright {
+    padding: 0 15px;
+    margin-bottom: 25px;
+
+    .copyright-logo {
+      width: 50px;
+      margin: 0 auto 15px;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 12px;
+      color: $white;
+      text-align: center;
+      span {
+        color: $yellow;
+      }
+    }
+  }
+}

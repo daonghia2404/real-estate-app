@@ -1,0 +1,34 @@
+extends includes/layout/layout-dark.pug
+
+block pages 
+  include includes/common/data.pug
+  section.selling-page 
+    .selling-page-wrapper
+      .selling-tab-items 
+        each item, index in dataTabs
+          .tab-item-wrapper(class=`${item.child.length > 0 ? 'have-child' : 'not-child'} ${index === 0 ? 'active' : ''}`)
+            .tab-item.d-flex.align-items-center.justify-content-between
+              =item.title 
+              if item.child.length !== 0
+                img(src="./assets/icons/icon-angle-bottom-blue.svg", alt="")
+              else 
+                img(src="./assets/icons/icon-angle-bottom-blue.svg", alt="").icon-mobile
+
+            if item.child.length === 0
+              .tab-content 
+                p= item.content
+
+            if item.child.length !== 0
+              .tab-item-childs 
+                each subTab in item.child
+                  .tab-item-wrapper(class=`${subTab.child && subTab.child.length > 0 ? 'have-child' : 'not-child'}`)
+                    .tab-item.d-flex.align-items-center.justify-content-between
+                      =subTab.title 
+                      if subTab.child && subTab.child.length !== 0
+                        img(src="./assets/icons/icon-angle-bottom-blue.svg", alt="")
+                      else 
+                        img(src="./assets/icons/icon-angle-bottom-blue.svg", alt="").icon-mobile
+
+                    if !subTab.child
+                      .tab-content 
+                        p= subTab.content

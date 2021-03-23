@@ -1,0 +1,14 @@
+include product-box.pug
+
+mixin sectionProductBox(title, des, datas)
+  section.section.section-product-box 
+    .container 
+      .section-header
+        h2.section-title= title 
+        p.section-des= des 
+
+      .section-main 
+        .row 
+          each item in datas
+            .col-lg-4.col-md-6
+              +productBox(item)

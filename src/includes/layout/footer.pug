@@ -1,0 +1,44 @@
+include ../components/button.pug
+
+footer.footer 
+  .container 
+    .footer-wrapper 
+      .row 
+        .col-lg-5.col-sm-6.footer-col
+          a(href="#").footer-logo
+            img(src="./assets/images/logo-square.png", alt="")
+          .footer-infomation 
+            a(href="#").infomation-item.d-flex.align-items-center 
+              img(src="./assets/icons/icon-location-blue.svg", alt="")
+              |North Link Building, 10 Admiralty Street, 757695 Singapore
+            a(href="to: 18006268").infomation-item.d-flex.align-items-center 
+              img(src="./assets/icons/icon-phone-blue.svg", alt="")
+              |Hotline: 1800 6268
+            a(href="mailto: contact@anphatland.com").infomation-item.d-flex.align-items-center 
+              img(src="./assets/icons/icon-mail-blue.svg", alt="")
+              |Email:  contact@flex-home.com
+
+        .col-lg-2.col-sm-6.footer-col
+          h4.footer-title About
+          .footer-lists
+            each item in ['About us','Contact us','Careers','Terms & Conditions']
+              a(href="#").list-item= item
+
+        .col-lg-3.col-sm-6.footer-col
+          h4.footer-title MORE INFORMATION
+          .footer-lists
+            each item in ['All projects','All properties','Houses for sale','Houses for rent']
+              a(href="#").list-item= item
+
+        .col-lg-2.col-sm-6.footer-col
+          h4.footer-title NEWS
+          .footer-lists
+            each item in ['Latest news','House architecture','House design','Building materials']
+              a(href="#").list-item= item
+            
+        .col-12 
+          .footer-bottom 
+            p © 2020 Flex Home is Proudly Powered by Botble Team
+            .footer-btn-group.d-flex.align-items-center 
+              +button('link', '1900 9669', './assets/icons/icon-phone-white.svg', 'secondary')
+              +button('link', 'Messenger', './assets/icons/icon-messenger-white.svg', 'messenger')

@@ -1,0 +1,14 @@
+mixin button(type, title, icon, className)
+  if (type === 'button')
+    button.button-component.d-flex.align-items-center.justify-content-center(class=`${className}`)
+      if icon 
+        img(src=`${icon}`, alt="").button-icon
+
+      span.button-title= title 
+  
+  if (type === 'link')
+    a(href="#" class=`${className}`).button-component.d-flex.align-items-center.justify-content-center
+      if icon 
+        img(src=`${icon}`, alt="").button-icon
+
+      span.button-title= title 

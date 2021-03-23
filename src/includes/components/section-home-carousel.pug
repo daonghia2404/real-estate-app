@@ -1,0 +1,20 @@
+section.section.section-home-carousel(style="padding-bottom: 0;")
+  .container 
+    .section-header
+      h2.section-title Featured projects
+      p.section-des We make the best choices with the hottest and most prestigious projects, please visit the details below to find out more
+
+  .section-home-carousel-wrapper
+    .owl-carousel#section-home-carousel.custom-style-carousel
+      each item in [1,2,3,4,5,6]
+        .item 
+          .home-carousel-item 
+            .item-background 
+              img(src="./assets/images/image-sample-box.png", alt="")
+            .item-overlay
+            .item-content 
+              .item-icon 
+                img(src="./assets/icons/icon-youtube-white.svg", alt="")
+              a(href="#").item-title HATAY MILLENNIUM
+              p.item-des Tòa tháp thiên niên kỷ Hatay Millennnium là dự án căn hộ chung cư tọa lạc tại Số 4 đường Quang Trung, phường Yết Kiêu, quận Hà Đông, Hà Nội
+

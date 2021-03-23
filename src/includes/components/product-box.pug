@@ -1,0 +1,18 @@
+mixin productBox(item)
+  .product-box-component 
+    a(href=`${item.link}`).product-image 
+      img(src=`${item.image}`, alt="")
+      if item.type === 'product'
+        .product-overlay
+        .product-overlay-content 
+          h6.content-title Đang mở bán
+          p.content-des Thanh toán 30% nhận nhà
+
+    a(href=`${item.link}`).product-title= item.title 
+    p.product-des= item.des 
+    if item.type === 'new'
+      p.product-content= item.new
+    if item.type === 'product'
+      .product-tags.d-flex.flex-wrap 
+        .tag-item Giá: #[span= item.tags.price]
+        .tag-item Giao nhà: #[span= item.tags.delivery]

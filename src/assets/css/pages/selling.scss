@@ -1,0 +1,121 @@
+section.selling-page {
+  .selling-page-wrapper {
+    padding: 0 15px;
+    max-width: 1170px;
+    margin: 30px auto;
+    .selling-tab-items {
+      position: relative;
+      flex: 1;
+      max-width: 300px;
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+      .tab-item-wrapper {
+        transition: 0.3s ease;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 0 5px;
+        overflow: hidden;
+        @media (max-width: 768px) {
+          padding: 0;
+        }
+        .tab-item-childs {
+          display: none;
+          .tab-item-wrapper {
+            margin-right: -5px;
+            @media (max-width: 768px) {
+              margin-right: 0;
+            }
+            .tab-item {
+              padding-left: 25px;
+            }
+            .tab-content {
+              padding-left: 35px;
+            }
+          }
+        }
+        .tab-content {
+          position: absolute;
+          top: 0;
+          display: none;
+          left: 100%;
+          height: 100%;
+          background: $input;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+          padding: 25px;
+          width: calc(1140px - 300px);
+          @media (max-width: 1170px) {
+            width: calc(100vw - 330px);
+          }
+          @media (max-width: 768px) {
+            width: 100%;
+            position: relative;
+            left: 0;
+            padding: 0 15px 15px 15px;
+          }
+
+        }
+        &.not-child {
+          &:hover,
+          &.active {
+            background: $input;
+            .tab-item {
+              color: $black;
+            }
+          }
+          &.active {
+            @media (min-width: 769px) {
+              border-top-left-radius: 8px;
+              border-bottom-left-radius: 8px;
+            }
+            .tab-content {
+              display: block;
+            }
+          }
+        }
+        &.have-child {
+          &:hover,
+          &.active {
+            & > .tab-item {
+              color: $black;
+            }
+          }
+          &.active {
+            & > .tab-item {
+              font-weight: 700;
+            }
+            .tab-item-childs {
+              display: block;
+            }
+          }
+        }
+        .tab-item {
+          padding: 10px 5px;
+          color: $grey;
+          .icon-mobile {
+            display: none;
+            width: 10px;
+            margin-left: 5px;
+          }
+          @media (max-width: 768px) {
+            align-items: flex-start !important;
+            padding: 10px;
+            .icon-mobile {
+              display: block;
+            }
+          }
+
+          img {
+            width: 10px;
+            margin-left: 5px;
+            pointer-events: none;
+          }
+        }
+        &:not(:last-of-type) .tab-item {
+          border-bottom: 1px solid $input;
+        }
+      }
+    }
+  }
+}

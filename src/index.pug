@@ -1,0 +1,13 @@
+extends includes/layout/layout.pug
+
+block pages 
+  include includes/common/data.pug
+  include includes/components/section-banner.pug
+
+  include includes/components/section-home-carousel.pug
+  include includes/components/section-product-box.pug
+  +sectionProductBox('', '', dataProducts)
+
+  +sectionProductBox('News', 'Below is the latest real estate news we get regularly updated from reliable sources.', dataNews)
+
+  +sectionProductBox('Recruit', 'Below is the latest real estate news we get regularly updated from reliable sources.', dataNews)
