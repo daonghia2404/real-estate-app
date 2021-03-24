@@ -1,0 +1,59 @@
+extends includes/layout/layout-dark.pug
+
+block pages 
+  include includes/components/button.pug
+  include includes/components/deposit-detail-modal.pug
+  section.deposit-page 
+    .container
+      .deposit-header.d-flex.justify-content-between
+        .header-item
+          .header-image 
+            img(src="./assets/images/image-sample-box.png", alt="")
+          p Mặt bằng điển hình #[span Tầng 14 - Toà M1]
+
+        .header-item
+          h3.header-title danh sách căn hộ mở bán
+          h3.header-title.d-flex.align-items-center.justify-content-between
+            span(style="font-weight: 400; color: #212529;") cập nhật lần cuối : #[span 14:68 - 26/7/2017]
+            +button('button', 'Cập nhật', '', 'primary-dark')
+          form(action="#").header-form
+            select.custom-select
+              option(value="#") Toà nhà M1
+              option(value="#") Toà nhà M2
+              option(value="#") Toà nhà M3
+              option(value="#") Toà nhà M4
+
+            select.custom-select
+              option(value="#") Tầng 1
+              option(value="#") Tầng 2
+              option(value="#") Tầng 3
+              option(value="#") Tầng 4
+          .header-note.d-flex.flex-wrap 
+            .note-item.d-flex.align-items-center 
+              .square.primary-dark
+              span Trống 
+            .note-item.d-flex.align-items-center 
+              .square.red-dark
+              span Đã bán 
+            .note-item.d-flex.align-items-center 
+              .square.green
+              span Đã có khách đặt 
+            .note-item.d-flex.align-items-center 
+              .square.grey-dark
+              span Khoá 
+          p DT* = Diện tích     BC* = Ban công
+    .line
+
+    .container 
+      .deposit-main.d-flex.flex-wrap.justify-content-center 
+        each item, index in ['primary-dark', 'grey-dark', 'green', 'red-dark', 'primary-dark', 'red-dark','red-dark','red-dark','red-dark','red-dark','primary-dark']
+          .deposit-item(class=`${item}`)#open-deposit-modal-detail
+            .item-header.d-flex
+              .item-number.d-flex.align-items-center.justify-content-center= index + 1
+              .item-price.d-flex.align-items-center.justify-content-center 2,340 tỷ
+            .item-main 
+              p DT thông thuỷ: #[span 79.50]
+              p DT tim tường: #[span 79.50]
+              p Hướng cửa: #[span Tây Bắc]
+              p Hướng BC: #[span Đông Nam]
+              p Số phòng ngủ: #[span 2]

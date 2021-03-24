@@ -33,12 +33,37 @@
     }
   }
 
+  &.primary-dark {
+    background: $primary-dark;
+    .button-title {
+      color: $white;
+      font-weight: 400;
+    }
+    &:hover {
+      background: lighten($primary-dark, 5%);
+    }
+  }
+
   &.messenger {
     background: #00B2FF;
     color: $white;
     &:hover {
       background: darken(#00B2FF, 5%);
     }
+  }
+
+  &.yellow {
+    background: $yellow;
+    color: $black;
+    &:hover {
+      background: darken($yellow, 5%);
+    }
+  }
+
+  &.priamry-dark-outline {
+    background: transparent;
+    border-color: $primary-dark;
+    color: $primary-dark;
   }
 
   @media (max-width: 768px) {

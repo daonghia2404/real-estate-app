@@ -13,57 +13,78 @@
         }
       }
     }
-    .footer-dark-button {
-      width: 100%;
-      height: 40px;
-      padding: 10px;
-      @include box-shadow;
-      &.large {
-        width: 240px;
-        @media (max-width: 575px) {
-          display: none !important;
-        }
-      }
-      &.medium {
-        width: 160px;
-        @media (max-width: 575px) {
-          width: 50%;
-        }
-      }
-      .button-content {
-        font-size: 14px;
-        width: 100%;
-        flex: 1;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-      img {
-        width: 15px;
-      }
-      &.icon-left {
-        flex-direction: row-reverse;
-        img {
-          margin-right: 10px;
-        }
-      }
-      &.icon-right {
-        img {
-          margin-left: 10px;
-        }
-      }
-      &.yellow {
-        background: $yellow;
-        .button-content {
-          color: $black;
-        }
-      }
-      &.white {
-        background: $white;
-        .button-content {
-          color: $black;
-        }
-      }
+  }
+}
+
+.footer-chatting-mobile {
+  display: none !important;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  background: $yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  transform: translateY(-150%);
+  @media (max-width: 575px) {
+    display: flex !important;
+  }
+  img {
+    width: 25px;
+    margin: auto;
+  }
+}
+
+.footer-dark-button {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  @include box-shadow;
+  &.large {
+    width: 240px;
+    @media (max-width: 575px) {
+      display: none !important;
+    }
+  }
+  &.medium {
+    width: 160px;
+    @media (max-width: 575px) {
+      width: 50%;
+    }
+  }
+  .button-content {
+    font-size: 14px;
+    width: 100%;
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  img {
+    width: 15px;
+  }
+  &.icon-left {
+    flex-direction: row-reverse;
+    img {
+      margin-right: 10px;
+    }
+  }
+  &.icon-right {
+    img {
+      margin-left: 10px;
+    }
+  }
+  &.yellow {
+    background: $yellow;
+    .button-content {
+      color: $black;
+    }
+  }
+  &.white {
+    background: $white;
+    .button-content {
+      color: $black;
     }
   }
 }

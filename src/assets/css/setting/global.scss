@@ -80,6 +80,7 @@ section.section {
 		margin: 30px 0;
 		display: flex;
 		justify-content: center;
+
 		.owl-dot {
 			width: 12px;
 			height: 12px;
@@ -88,6 +89,7 @@ section.section {
 			margin: 0 4px;
 			transition: .3s ease;
 			outline: none;
+
 			&.active {
 				background: $secondary;
 			}
@@ -100,16 +102,19 @@ body.layout-dark {
 		.header-nav-dark {
 			transform: translateX(0%);
 		}
+
 		@media (min-width: 992px) {
+
 			.footer-dark-wrapper,
 			.main-dark {
 				padding-left: 240px;
 			}
-			
+
 		}
 	}
+
 	.main-dark {
-		padding-top: 48px;
+		padding: 48px 0 40px;
 		height: 100vh;
 		width: 100vw;
 		overflow: auto;
@@ -117,3 +122,81 @@ body.layout-dark {
 	}
 }
 
+.square {
+	width: 12px;
+	height: 12px;
+
+	&.primary-dark {
+		background: $primary-dark;
+	}
+
+	&.grey-dark {
+		background: $grey-dark;
+	}
+
+	&.green {
+		background: $green;
+	}
+
+	&.red-dark {
+		background: $red-dark;
+	}
+
+	&.yellow {
+		background: $yellow;
+	}
+}
+
+.tab-wrapper {
+	.tab-group {
+		margin-bottom: 10px;
+		border-bottom: 1px solid $input;
+		display: flex;
+
+		.tab-item {
+			font-size: 13px;
+			font-weight: 700;
+			cursor: pointer;
+			padding: 10px 0;
+			text-align: center;
+			flex: auto;
+			text-transform: uppercase;
+			border-bottom: 3px solid transparent;
+			color: $grey;
+
+			&:hover,
+			&.active {
+				border-bottom: 3px solid $primary-dark;
+				color: $primary-dark;
+			}
+		}
+	}
+
+	.tab-main-group {
+		.tab-item {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+	}
+}
+
+.custom-modal {
+	pointer-events: none;
+	transition: 0.3s ease;
+	transform: translateY(-30%);
+	opacity: 0;
+
+	&.active {
+		transform: translateY(0);
+		opacity: 1;
+		pointer-events: unset;
+	}
+}
+
+select.custom-select {
+	box-shadow: none;
+	background: $input url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.28125 0C0.59375 0 0.25 0.8125 0.75 1.28125L4.46875 5C4.75 5.3125 5.21875 5.3125 5.53125 5L9.25 1.28125C9.71875 0.8125 9.375 0 8.71875 0H1.28125Z' fill='%234A4A4A'/%3E%3C/svg%3E%0A") right .75rem center/8px 10px no-repeat;
+}

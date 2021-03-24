@@ -1,0 +1,99 @@
+.deposit-detail-modal#deposit-modal-detail.custom-modal 
+  .modal-overlay
+  .modal-main-wrapper
+    .modal-header
+      h2 Mặt bằng 08A - Tầng 6 - Tòa S2
+      .modal-close 
+        img(src="./assets/icons/icon-close-blue.svg", alt="")
+    .modal-main
+      .container  
+        .modal-main-wrapper
+          .row.align-items-center
+            .col-lg-4.col-md-12
+              .deposit-detail-image 
+                img(src="./assets/images/image-sample-box.png", alt="")
+            .col-lg-4.col-md-6
+              .deposit-detail-description
+                h3 Căn hộ: 05A ( MÃ: 405A )
+                p Diện tích tim tường: #[span 108,1 m2]
+                p Diện tích thổng thủy: #[span 98,6 m2]
+                p Phòng ngủ: #[span 3]
+                p Hướng ban công: #[span Tây Bắc]
+                p Hướng nhìn: #[span View Hồ]
+                p Trạng thái: #[span Chưa bán]
+                p Giá trị căn hộ: #[span 5.896 tỷ]
+                p VAT(10%): #[span 589,6 triệu vnđ]
+                p KPBT(2%): #[span 117,9 triệu vnđ]
+                p Tổng giá trị căn hộ: #[span 6.603,5 vnđ]
+
+                .footer-dark-button.medium.d-flex.align-items-center.icon-left.yellow
+                  span.button-content
+                  img(src="./assets/icons/icon-prices-blue.svg", alt="")
+                
+                +button('button', 'Bảng tính trả góp', '', 'priamry-dark-outline w-100 bang-tinh-btn-mobile')
+
+            .col-lg-4.col-md-6
+              form(action="#").deposit-detail-form
+                .form-wrapper
+                  h2 BẢNG TÍNH TRẢ GÓP
+                  .form-group 
+                    .form-item 
+                      label Số tiền vay
+                      input(type="text")
+                    .form-item 
+                      label Thời gian vay
+                      select.custom-select
+                        option(value="#")
+                      select.custom-select
+                        option(value="#")
+                  .form-group
+                    .form-item
+                      label Chọn công ty tài chính
+                      select.custom-select
+                        option(value="#")
+                  .form-group
+                    .form-item
+                      label Lãi suất
+                      input(type="text")
+                .form-wrapper
+                  .tab-form.tab-wrapper 
+                    .tab-group 
+                      .tab-item.active Tháng đầu tiên
+                      .tab-item Tổng phải trả
+                    .tab-main-group
+                      .tab-item.active
+                        p Số tiền bạn phải trả tháng đầu tiên:
+                        .form-progress 
+                          .progress-bar(style="width: 80%;")
+                        .form-note-wrapper.d-flex.justify-content-between
+                          .form-note
+                            .note-item.d-flex.align-items-center
+                              .square.primary-dark
+                              span 63 Triệu tiền gốc
+                            .note-item.d-flex.align-items-center
+                              .square.yellow
+                              span 63 Triệu tiền gốc
+                          .form-note.total 
+                            span Tổng
+                            br
+                            span 66.8 Triệu
+                        
+                      .tab-item 
+                        p Số tiền bạn phải trả:
+                        .form-progress 
+                          .progress-bar(style="width: 90%;")
+                        .form-note-wrapper.d-flex.justify-content-between
+                          .form-note
+                            .note-item.d-flex.align-items-center
+                              .square.primary-dark
+                              span 163 Triệu tiền gốc
+                            .note-item.d-flex.align-items-center
+                              .square.yellow
+                              span 163 Triệu tiền gốc
+                          .form-note.total 
+                            span Tổng
+                            br
+                            span 166.8 Triệu
+
+                  p.font-italic.text-center(style="margin: 15px 0;") Xem chi tiết hàng tháng
+                  +button('button', 'Đăng ký vay', '', 'yellow')

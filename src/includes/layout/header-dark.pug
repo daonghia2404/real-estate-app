@@ -1,13 +1,55 @@
+include ../components/button.pug
+
 header.header-dark 
   .header-wrapper.d-flex.align-items-center.justify-content-between 
     .header-btn-bar 
       img(src="./assets/icons/icon-bar-white.svg", alt="")
     .header-right.d-flex.align-items-center
       form(action="#").form-search.d-flex.align-items-center
+        input(type="text" placeholder="Tìm căn hộ")
+
         .search-icon 
           img(src="./assets/icons/icon-search-white.svg", alt="")
-        input(type="text" placeholder="Tìm căn hộ")
+
+        .search-dropdown-placement
+          .header-search-dropdown 
+            .header-search-close 
+              img(src="./assets/icons/icon-close-blue.svg", alt="")
+            form(action="#").search-form
+              .form-item 
+                select.custom-select
+                  option(value="#") Số phòng ngủ 
+              .form-item 
+                select.custom-select
+                  option(value="#") Hướng ban công
+              .form-item 
+                select.custom-select
+                  option(value="#") Mức giá
+              .form-item 
+                select.custom-select
+                  option(value="#") Số phòng vệ sinh
+              .form-item
+                +button('button', 'Tìm kiếm ngay', '', 'primary-dark')
       
       .header-notification 
         .circle 3
         img(src="./assets/icons/icon-notification-white.svg", alt="")
+
+      .notification-dropdown-placement
+        .header-notification-dropdown 
+          .header-notification-close 
+            img(src="./assets/icons/icon-close-blue.svg", alt="")
+          
+          .notification-main 
+            h3 Thông báo
+            .nofitication-lists 
+              .list-item.d-flex 
+                .item-avatar 
+                .item-content 
+                  h6 #[span Hoàng Huyền] đã trả lời câu hỏi của bạn trên trang cộng đồng
+                  p.item-date 23 phút trước
+              .list-item.d-flex.unread
+                .item-avatar 
+                .item-content 
+                  h6 #[span Hoàng Huyền] đã trả lời câu hỏi của bạn trên trang cộng đồng
+                  p.item-date 23 phút trước

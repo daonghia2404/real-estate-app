@@ -1,4 +1,63 @@
 extends includes/layout/layout-dark.pug
 
 block pages 
-  h1 About Page
+  include includes/common/data.pug
+  section.about-page
+    .about-page-overlay
+    .about-pages-wrapper 
+      .tab-wrapper.about-page-header
+        .tab-group.d-flex.justify-content-center
+          .tab-item.active Tổng quan
+          .tab-item Vị trí
+          .tab-item Tiện ích
+          .tab-item Video
+        
+        .tab-main-group 
+          .tab-item.active 
+            .about-main-content
+              h3.text-center VỊ THẾ UY PHONG – CỘNG ĐỒNG ĐẲNG CẤP
+              p.text-center #[span Vinhomes Metropolis (Hay còn gọi là Vinhomes Liễu Giai)] là dự án bất động sản mới và rất nổi bật của tập đoàn Vingroup – tập đoàn bất động sản hàng đầu Việt Nam về lĩnh vực đầu tư và xây dựng. Nhiều người biết Vingroup từ rất nhiều các dự án thành công vang dội như Vinhomes Times City, Vinhomes Royal City, Vinhomes Nguyễn Chí Thanh,…Do vậy, khi thông tin dự án Vinhomes Metropolis Liễu Giai được đưa ra đã tạo ra cơn sốt trên thị trường BĐS trong những ngày đầu năm 2016.
+          
+          .tab-item 
+            .about-main-content
+              h3 VỊ TRÍ CHUNG CƯ VINHOMES METROPOLIS LIỄU GIAI
+
+              p Chung cư Vinhomes Metropolis sở hữu vị trí SIÊU đắc địa tại mảnh đất “Vàng” đẹp bậc nhất Thủ Đô, dự án mang tầm nhìn chiến lược và được Chủ đầu tư – Tập đoàn Vingroup dành nhiều tâm huyết đầu tư kỹ lưỡng cho tất cả các chi tiết dù là nhỏ nhất của dự án.
+              br
+              p Vị trí chính xác của Chung cư Vinhomes Metropolis Liễu Giai :
+              br
+              p Tọa lại tại mặt đường Liễu Giai
+              p Phía Bắc giáp ngay cạnh Đại sứ quán Nhật Bản, tầm view cực đẹp xa ra Hồ Tây
+              p Phía Nam view hồ Ngọc Khánh
+              p Phía Đông nhìn về phía trung tâm thành phố
+              p Phía Tây đối diện với Tòa Nhà Lotte và có tầm view hồ Thủ Lệ
+              br       
+              p Có thể nói Chung cư Vinhomes Metropolis Liễu Giai sở hữu một vị trí đặc biệt đắc đại với tầm nhìn đẹp mắt, rộng mở. Xét theo phong thủy: Vinhomes Liễu Giai còn là vùng đất địa linh nhân kiệt với thế đất tốt, Bên tả là Hồ Ngọc Khánh, bên hữu là Hồ Tây, trước mặt là hồ Thủ Lệ, sau lưng là hồ Giảng Võ và tứ phía là khu nhân sinh đông đúc, có trình độ dân trí cao mang tới nguồn sinh khí tốt.
+              br
+              p Chỉ 10 phút đến Hồ Tây, 5 phút tới Hồ Ngọc Khánh, 3 phút tới hồ Thủ Lệ…
+              p Chỉ 20 phút tới sân bay quốc tế Nội Bài
+              p Xung quanh là nhiều công viên cây xanh, sở thú
+              p Nằm trên các tuyến đường trọng yếu của thủ đô: đường Liễu Giai, đường Kim Mã.
+              p Các đại sứ quán, khu ngoại giao đoàn, trường ĐH Quốc tế, trường học các cấp, trong tầm đi bộ.
+              p Ở cạnh các TTTM, vui chơi giải trí, các cao ốc văn phòng lớn.
+
+          .tab-item 
+            .about-main-content
+              h3 Tiện ích dự án Vinhomes Metropolis
+              p Vinhomes Metropolis là dự án mang thương hiệu Vinhomes thuộc tập đoàn Vingroup, thương hiệu uy tín hàng đầu trên thị trường bất động sản tại Việt Nam. Luôn tiên phong kiến tạo nên phong cách sống mới đẳng cấp, dự án đẳng cấp tại vị trí Vàng trung tâm 29 Liễu Giai được xây dựng với những tiện ích xứng tầm, nhằm tạo nên một không gian sống thực sự phong cách và đẳng cấp cho cộng đồng cư dân thịnh vượng và thành đạt.
+              p Tại Vinhomes Metropolis hệ thống tiện ích đầy đủ đi kèm dịch vụ 5* hứa hẹn mang lại cho chủ nhân sự hưởng thụ trọn vẹn giá trị của cuộc sống. Đặc trưng cảnh quan của dự án là ý tưởng VƯỜN NỔI SÁNG TẠO với sự kết hợp hài hòa giữa cây xanh và mặt nước tỏa sáng với không gian tiện ích liên thông để cộng đồng tương lai được sống chuẩn cấp.
+              p Được tư vấn thiết kế bởi Tập đoàn Atkins (Vương Quốc Anh) – đơn vị tư vấn quản lý dự án, thiết kế uy tín nhất trên thế giới. Đây cũng là tập đoàn tư vấn kỹ thuật hàng đầu Châu Âu với gần 18,500 nhân sự hoạt động ở hơn 150 quốc gia. Atkins đã đem đến những ý tưởng thiết kế độc đáo và đẳng cấp, tạo lập cuộc sống giá trị xứng tầm cho các cư dân:
+              br
+              p – Ý tưởng vườn nổi sáng tạo – Floating Garden
+              p – Tầng 1 hài hoà không gian chức năng với không gian cảnh quan
+              p – Tầng 4 là không gian tiện ích dành riêng cho cộng đồng cư dân
+            
+            .tien-ich-wrapper.d-flex.flex-wrap 
+              each item in dataTienIch
+                .tien-ich-item.d-flex.align-items-center 
+                  img(src=`${item.icon}`, alt="")
+                  = item.title
+
+          .tab-item 
+            .about-play-btn 
+              img(src="./assets/icons/icon-play-white.svg", alt="")

@@ -25,3 +25,7 @@
 @mixin linearGradient($direction) {
   background: linear-gradient(to $direction, rgba(23, 43, 116, 0.9), rgba(23, 43, 116, 0.4));
 }
+
+@mixin linearGradientMain($direction) {
+  background: linear-gradient(to $direction, #0b1d2f, #838792, #021931);
+}

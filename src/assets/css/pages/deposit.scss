@@ -1,0 +1,195 @@
+.deposit-page {
+  padding: 30px 0;
+
+  .line {
+    height: 1px;
+    margin: 30px 0;
+    background: $input;
+  }
+
+  .deposit-header {
+    max-width: 780px;
+    margin: 0 auto;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: unset !important;
+      justify-content: unset !important;
+      max-width: 100%;
+    }
+
+    span {
+      font-weight: 600;
+      color: $primary-dark;
+    }
+
+    .header-item {
+      flex: 0 0 48%;
+      max-width: 48%;
+
+      @media (max-width: 991px) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 30px;
+      }
+
+      &:nth-of-type(1) {
+        text-align: right;
+        @media (max-width: 991px) {
+          text-align: center;
+        }
+
+        .header-image {
+          max-width: 260px;
+          height: 180px;
+          overflow: hidden;
+          border-radius: 4px;
+          @include centerImage;
+          margin-bottom: 10px;
+          margin-left: auto;
+
+          @media (max-width: 991px) {
+            margin: 0 auto 10px;
+          }
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+
+      .header-title {
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: 0;
+
+        @media (max-width: 575px) {
+          flex-direction: column;
+          align-items: flex-start !important;
+          margin-bottom: 5px;
+
+          .button-component {
+            margin: 5px 0 0 0 !important;
+          }
+        }
+
+        .button-component {
+          margin-left: 15px;
+        }
+      }
+
+      .header-form {
+        margin-top: 30px;
+
+        .custom-select {
+          border: 1px solid $primary-dark;
+          color: $primary-dark;
+          width: 100%;
+          margin: 0 0 25px 0;
+          box-shadow: none;
+          border-radius: 0;
+          background: $white url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.28125 0C0.59375 0 0.25 0.8125 0.75 1.28125L4.46875 5C4.75 5.3125 5.21875 5.3125 5.53125 5L9.25 1.28125C9.71875 0.8125 9.375 0 8.71875 0H1.28125Z' fill='%234A4A4A'/%3E%3C/svg%3E%0A") right .75rem center/8px 10px no-repeat;
+        }
+      }
+
+      .header-note {
+        margin-bottom: 15px;
+
+        .note-item {
+          margin-right: 10px;
+
+          .square {
+            margin-right: 10px;
+          }
+
+          span {
+            font-weight: 400;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.deposit-main {
+  .deposit-item {
+    max-width: 150px;
+    width: 100%;
+    border: 1px solid $input;
+    margin: 0 10px 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    @media (max-width: 575px) {
+      max-width: 135px;
+      margin: 0 5px 10px;
+    }
+
+    &:hover {
+      border-color: $primary-dark;
+    }
+
+    &.primary-dark {
+      .item-header {
+        background: $primary-dark;
+      }
+
+      .item-main {
+        p {
+          color: $primary-dark;
+        }
+      }
+    }
+
+    &.grey-dark {
+      .item-header {
+        background: $grey-dark;
+      }
+    }
+
+    &.green {
+      .item-header {
+        background: $green;
+      }
+    }
+
+    &.red-dark {
+      .item-header {
+        background: $red-dark;
+      }
+    }
+
+    .item-header {
+      .item-number {
+        max-width: 32px;
+        flex: 0 0 32px;
+        height: 32px;
+        border-right: 1px solid $white;
+        color: $white;
+        font-size: 14px;
+      }
+
+      .item-price {
+        font-size: 16px;
+        color: $white;
+        flex: 1;
+      }
+    }
+
+    .item-main {
+      background: $white;
+      padding: 12px 8px;
+
+      p {
+        font-size: 12px;
+        color: $grey;
+        line-height: 1.8;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
