@@ -1,0 +1,61 @@
+extends includes/layout/layout.pug
+
+block pages 
+  -
+    const dataNavigationLinks = [
+      { title: 'Trang chủ', link: 'index.html' },
+      { title: 'Tuyển dụng', link: 'tuyen-dung.html' },
+      { title: 'AnPhat Land tuyển dụng vị trí Chuyên viên kinh doanh Bất Động Sản', link: '#' },
+    ]
+  include includes/common/data.pug
+  include includes/components/banner-category.pug
+  +bannerCategory('Tuyển dụng')
+
+  section.section-tuyen-dung-page
+    .container 
+      .section-tuyen-dung-page-detail-wrapper
+        .row 
+          .col-lg-8
+            include includes/components/nav-links.pug
+            +navLinks(dataNavigationLinks)
+            h1.new-title AnPhat Land tuyển dụng vị trí Chuyên viên kinh doanh Bất Động Sản
+            .new-detail-main.style-editable
+              img(src="./assets/images/image-tuyen-dung.png", alt="")
+              h4 ANPHATLAND vinh dự và tự hào là đại lý chiến lược các dự án của Tập Đoàn Nam Cường – Nơi Hội Tụ Sức Mạnh – Lan Tỏa
+
+              p Cơ hội việc làm nóng bỏng dành cho những bạn trẻ đam mê kinh doanh đặc biệt là cơ hội cho các bạn sinh viên mới ra trường . ANPHATLAND tuyển dụng nhân viên kinh doanh triển khai bán các dự án
+
+              h4 MÔ TẢ CÔNG VIỆC
+
+              p 
+                |Tư vấn và hỗ trợ về các thủ tục mua bán .
+                |Thực hiện bán hàng do Công ty cung cấp.
+                |Tham gia các sự kiện đào tạo của công ty.
+
+              h4 QUYỀN LỢI
+
+              p  
+                |Mức Lương: lương cơ bản + hoa hồng (không giới hạn tùy theo năng lực)
+                |Đào tạo và hoàn thiện kỹ năng (giao tiếp, tư vấn, thuyết phục, nắm bắt tâm lý khách hàng …)
+                |Làm việc trong môi trường tự do năng động
+                |Cơ chế hoa hồng hấp dẫn
+                |Chế độ đãi ngộ thỏa đáng, phụ cấp phù hợp với công sức
+
+              h4 YÊU CẦU CÔNG VIỆC
+
+              p
+                |Ứng viên từ 20 tuổi trở lên
+                |Là người yêu thích kinh doanh, dám chấp nhận thử thách, chịu được áp lực, mong muốn mức thu nhập cao.
+                |Nhanh nhẹn, khéo léo. Khả năng giao tiếp, thuyết phục khách hàng và tiếp cận khách hàng tốt.
+                |Giọng nói chuẩn, dễ nghe.
+                |Có trách nhiệm trong công việc.
+
+              h4 LIÊN HỆ
+              p
+                |Gửi CV qua mail: hcns@anphatland.com.vn
+                |☎️ Call trực tiếp bộ phận HCNS : 0988.300.058– 0989.317.943
+                |Đăng ký trực tiếp theo link dưới đây: https://bit.ly/2Z4RBAZ
+                |Địa điểm làm việc: VPBH Tập Đoàn Nam Cường Buling Hà Nội
+                |Trụ Sở Chính: 23B5 – Phố Cự Lộc- Phường Thượng Đình- Thanh Xuân – Hà Nội
+          .col-lg-4
+            include includes/components/news-sidebar.pug

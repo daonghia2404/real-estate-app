@@ -1,0 +1,10 @@
+mixin navLinks(data)
+  section.section-nav-link.d-flex.flex-wrap 
+    .container 
+      .section-nav-link-wrapper
+        each item in data 
+          if (item.link === '#')
+            span.link-item= item.title 
+          else 
+            a(href=`${item.link}`).link-item= item.title
+            span.link-item.line= `|`

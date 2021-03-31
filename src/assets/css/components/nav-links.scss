@@ -1,0 +1,11 @@
+.section-nav-link {
+  padding: 10px 0;
+  .section-nav-link-wrapper {
+    .link-item {
+      color: $primary;
+      font-size: 12px;
+      margin-right: 5px;
+      padding-right: 5px;
+    }
+  }
+}

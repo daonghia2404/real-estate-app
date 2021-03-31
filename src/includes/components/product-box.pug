@@ -1,5 +1,5 @@
 mixin productBox(item)
-  .product-box-component 
+  .product-box-component(class=`${item.isHorizontal ? 'horizontal' : ''}`)
     a(href=`${item.link}`).product-image 
       img(src=`${item.image}`, alt="")
       if item.type === 'product'
@@ -8,11 +8,12 @@ mixin productBox(item)
           h6.content-title Đang mở bán
           p.content-des Thanh toán 30% nhận nhà
 
-    a(href=`${item.link}`).product-title= item.title 
-    p.product-des= item.des 
-    if item.type === 'new'
-      p.product-content= item.new
-    if item.type === 'product'
-      .product-tags.d-flex.flex-wrap 
-        .tag-item Giá: #[span= item.tags.price]
-        .tag-item Giao nhà: #[span= item.tags.delivery]
+    .product-box-info-wrapper
+      a(href=`${item.link}`).product-title= item.title 
+      p.product-des= item.des 
+      if item.type === 'new'
+        p.product-content= item.new
+      if item.type === 'product'
+        .product-tags.d-flex.flex-wrap 
+          .tag-item Giá: #[span= item.tags.price]
+          .tag-item Giao nhà: #[span= item.tags.delivery]

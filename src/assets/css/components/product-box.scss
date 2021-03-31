@@ -73,4 +73,25 @@
       }
     }
   }
+
+  &.horizontal {
+    display: flex;
+    align-items: center;
+    .product-title {
+      @include ellipsis(2);
+    }
+    .product-image {
+      margin-right: 10px;
+      flex: 0 0 72px;
+      max-width: 72px;
+      height: 72px;
+    }
+    .product-content {
+      @include ellipsis(1);
+      height: 18px;
+    }
+    .product-des {
+      margin-bottom: 0;
+    }
+  }
 }

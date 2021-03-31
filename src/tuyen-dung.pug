@@ -1,0 +1,28 @@
+extends includes/layout/layout.pug
+
+block pages 
+  -
+    const dataNavigationLinks = [
+      { title: 'Trang chủ', link: 'index.html' },
+      { title: 'Tuyển dụng', link: '#' },
+    ]
+  include includes/common/data.pug
+  include includes/components/banner-category.pug
+  +bannerCategory('Tuyển dụng')
+
+  section.section-tuyen-dung-page
+    .container 
+      .section-tuyen-dung-page-detail
+        .row 
+          .col-lg-8
+            include includes/components/nav-links.pug
+            +navLinks(dataNavigationLinks)
+
+            .section-main 
+              .row 
+                each item in [...dataNews, ...dataNews]
+                  .col-md-6
+                    include includes/components/product-box.pug
+                    +productBox(item)
+          .col-lg-4
+            include includes/components/news-sidebar.pug

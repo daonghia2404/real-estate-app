@@ -1,0 +1,30 @@
+section.section.section-news-sidebar
+  .section-news-sidebar-wrapper
+    form.sidebar-form-search(action="#").d-flex.align-items-center
+      .search-icon 
+        img(src="./assets/icons/icon-search-orange.svg", alt="")
+      input(type="text" placeholder="Gõ từ khoá bạn muốn tìm kiếm")
+
+    .section-header
+      h2.section-title News
+    .news-lists 
+      each item in dataNewsHorizontal
+        include product-box.pug
+        +productBox(item)
+
+    .section-header
+      h2.section-title Đăng ký nhận tin
+    
+    form.sidebar-form-register(action="#").custom-style-form
+      .form-group 
+        .form-item 
+          label Họ tên
+          input(type="text" placeholder="Nhập họ tên")
+          p.form-error Họ và tên bắt buộc
+        .form-item 
+          label Email
+          input(type="text" placeholder="Nhập email")
+        .form-item 
+          label Số điện thoại
+          input(type="text" placeholder="Nhập số điện thoại")
+    
