@@ -1,0 +1,80 @@
+-
+  const dataOverview = [
+    [
+      {
+        title: 'Trạng thái',
+        value: 'Đang mở bán',
+        state: 'green',
+      },
+      {
+        title: 'Thời gian giao nhà',
+        value: '03/2021',
+        state: '',
+      },
+      {
+        title: 'Số tầng',
+        value: '36',
+        state: '',
+      },
+      {
+        title: 'Mật độ xây dựng (%)',
+        value: '30',
+        state: '',
+      },
+    ],
+    [
+      {
+        title: 'Giá',
+        value: '18 - 25 triệu/m2',
+        state: 'orange',
+      },
+      {
+        title: 'Quy mô',
+        value: '5.5 ha',
+        state: '',
+      },
+      {
+        title: 'Số căn hộ',
+        value: '4000',
+        state: '',
+      },
+      {
+        title: 'Diện tích xây dựng',
+        value: '52 -95 m2',
+        state: '',
+      },
+    ],
+    [
+      {
+        title: 'Thời gian xây dựng',
+        value: '01/2019',
+        state: '',
+      },
+      {
+        title: 'Số block',
+        value: '7',
+        state: '',
+      },
+      {
+        title: 'Không gian xanh (%)',
+        value: '70',
+        state: '',
+      },
+      {
+        title: 'Chủ đầu tư',
+        value: 'Cardi B',
+        state: 'orange',
+      },
+    ],
+  ]
+
+.project-detail-card 
+  h3.project-title Thông tin chi tiết
+  .row 
+    each col in dataOverview
+      .col-lg-4 
+        .overview-column 
+          each item in col
+            .overview-item.d-flex.justify-content-between
+              p.item-title= item.title
+              p.item-value(class=`${item.state ? item.state : ''}`)= item.value

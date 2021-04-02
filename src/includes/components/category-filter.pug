@@ -1,0 +1,70 @@
+.category-filter
+  form(action="#" method="method").custom-style-form
+    .form-group 
+      .form-item 
+        label.bold.black.big TÌM KIẾM DỰ ÁN
+        .form-input.search.d-flex.align-items-center 
+          img(src="./assets/icons/icon-search-orange.svg", alt="")
+          input(type="text" placeholder="Enter keyword...")
+    .form-group 
+      .form-item 
+        label.bold.black Location
+        .form-select
+          select.custom-select
+            option(value="#") Select
+    .form-group 
+      .form-item 
+        label.bold.black Category
+        .form-select
+          select.custom-select
+            option(value="#") Select
+    if expandFilter
+      .form-group 
+        .form-item 
+          label.bold.black Number of bathrooms
+          .form-select
+            select.custom-select
+              option(value="#") Select
+      .form-group 
+        .form-item 
+          label.bold.black Number of floors
+          .form-select
+            select.custom-select
+              option(value="#") Select
+
+    else 
+      .form-group 
+        .form-item 
+          label.bold.black Number of blocks
+          .form-select
+            select.custom-select
+              option(value="#") Select
+    .form-group.half
+      .form-item 
+        label.bold.black Floor from
+        .form-select
+          select.custom-select
+            option(value="#") Select
+      .form-item 
+        label.bold.black Floor to
+        .form-select
+          select.custom-select
+            option(value="#") Select
+    .form-group.half
+      .form-item 
+        label.bold.black Flat from
+        .form-select
+          select.custom-select
+            option(value="#") Select
+      .form-item 
+        label.bold.black Flat to
+        .form-select
+          select.custom-select
+            option(value="#") Select
+    .form-group
+      .form-item 
+        label.bold.black Flat from
+        .form-button
+          button.yellow Tìm kiếm
+      
+      

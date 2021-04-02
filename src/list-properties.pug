@@ -1,0 +1,41 @@
+extends includes/layout/layout.pug
+block pages 
+  include includes/common/data.pug
+  - const expandFilter = true
+  section.section-main-wrapper.section-list-projects 
+    .container 
+      .section-wrapper 
+        h2.section-title NHà - căn hộ
+        p.section-des Các dự án nổi bật
+
+      .section-main
+        .row 
+          .col-lg-4
+            include includes/components/category-filter.pug 
+          .col-lg-8
+            .project-lists-wrapper 
+              .project-header.d-flex.justify-content-end
+                form(action="#" method="method").custom-style-form
+                  .form-group.half 
+                    .form-item 
+                      label.bold.black Per page 
+                      .form-select
+                        select.custom-select
+                          option(value="#") 8
+                          option(value="#") 9
+                          option(value="#") 10
+                    .form-item 
+                      label.bold.black Sort by
+                      .form-select
+                        select.custom-select
+                          option(value="#") Default
+                          option(value="#") A - Z
+                          option(value="#") Z - A
+
+              .project-main 
+                .row 
+                  each item in dataProducts
+                    .col-md-6
+                      include includes/components/product-box.pug
+                      +productBox(item)
+        

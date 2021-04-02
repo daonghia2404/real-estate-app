@@ -17,6 +17,28 @@
     }
   }
 
+  &.no-radius {
+    border-radius: 0;
+  }
+
+  &.bold {
+    .button-title {
+      font-weight: bold;
+    }
+  }
+  
+  &.big {
+    padding: 10px 15px;
+  }
+
+  &.reverse {
+    flex-direction: row-reverse;
+    .button-icon {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+  }
+
   &.secondary {
     background: $secondary;
     color: $white;

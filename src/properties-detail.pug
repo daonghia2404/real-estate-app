@@ -1,0 +1,41 @@
+extends includes/layout/layout.pug
+block pages 
+  include includes/common/data.pug
+  section.section-main-wrapper.section-project-detail
+    .container
+      h2.section-title Nhà Đẹp eco green
+      p.section-des
+        a(href="#") Trang chủ 
+        span » 
+        a(href="#") Properties
+        span » 
+        span Nhà Đẹp eco green
+  
+    .properties-detail-banner
+      .owl-carousel#section-properties-carousel-view
+        each item, index in [1,2,3,1,2,3,1,2,3]
+          .item 
+            .banner-item 
+              .item-overlay
+              a(href=`./assets/images/image-project-detail-${item}.png`).js-gallery-item
+                img(src=`./assets/images/image-project-detail-${item}.png`, alt="")
+
+      .banner-control.d-flex.align-items-center.justify-content-center
+        .owl-carousel#section-properties-carousel-control
+          each item, index in [1,2,3,1,2,3,1,2,3]
+            .item 
+              .banner-item 
+                img(src=`./assets/images/image-project-detail-${item}.png`, alt="")
+
+
+    .project-detail-main 
+      .container
+        include includes/components/project-detail-overview.pug
+        .row
+          .col-lg-8 
+            include includes/components/properties-detail-content.pug
+          .col-lg-4 
+            include includes/components/project-detail-contact.pug
+
+  include includes/components/section-product-box.pug
+  +sectionProductBox('Dự án liên quan', 'Below is the latest real estate news we get regularly updated from reliable sources.', dataProducts)

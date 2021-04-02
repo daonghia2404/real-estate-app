@@ -1,0 +1,45 @@
+extends includes/layout/layout.pug
+block pages 
+  include includes/common/data.pug
+  section.section-main-wrapper.section-project-detail
+    .container
+      h2.section-title Eco Green Sài Gòn
+      p.section-des
+        a(href="#") Trang chủ 
+        span » 
+        a(href="#") Dự án
+        span » 
+        span Eco Green Sài Gòn
+  
+    .project-detail-banner
+      .owl-carousel#section-properties-carousel-view
+        each item in [1,2,3]
+          .item 
+            .banner-item 
+              img(src=`./assets/images/image-project-detail-${item}.png`, alt="")
+
+    .project-detail-main 
+      .tab-wrapper 
+        .tab-group 
+          .container
+            .d-flex.flex-wrap
+              .tab-item.active Tổng quan
+              .tab-item Chủ đầu tư
+              .tab-item Vị trí
+              .tab-item Bảng hàng
+
+        .tab-main-group
+          .container
+            .tab-item.active
+              include includes/components/project-detail-overview.pug
+              .row
+                .col-lg-8 
+                  include includes/components/project-detail-content.pug
+                .col-lg-4 
+                  include includes/components/project-detail-contact.pug
+            .tab-item
+            .tab-item
+            .tab-item
+
+  include includes/components/section-product-box.pug
+  +sectionProductBox('Dự án liên quan', 'Below is the latest real estate news we get regularly updated from reliable sources.', dataProducts)

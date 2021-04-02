@@ -5,6 +5,7 @@ window.onload = () => {
   chartBarJs.init()
   tabBasicEvent.init()
   modalCustom.init()
+  modalImage.init()
 }
 
 const clickEvent = {
@@ -96,6 +97,8 @@ const clickEvent = {
 const owlCarousel = {
   init: function () {
     this.setupHomeBannerCarousel()
+    this.setupProjectBannerCarousel()
+    this.setupPropertiesBannerCarousel()
   },
   setupHomeBannerCarousel: function () {
     const carousel = $("#section-home-carousel").owlCarousel({
@@ -117,6 +120,83 @@ const owlCarousel = {
       center: true,
       margin: 15,
     });
+  },
+  setupProjectBannerCarousel: function() {
+    const carousel = $("#section-project-carousel").owlCarousel({
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 3
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      smartSpeed: 300,
+      dots: false,
+      nav: false,
+      center: true,
+      margin: 0,
+    });
+  },
+  setupPropertiesBannerCarousel: function() {
+    const carouselView = $("#section-properties-carousel-view").owlCarousel({
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 3
+        },
+      },
+      loop: true,
+      smartSpeed: 300,
+      dots: false,
+      nav: false,
+      touchDrag: false,
+      mouseDrag: false,
+      center: true,
+      margin: 0,
+    });
+
+
+    const carouselControl = $("#section-properties-carousel-control").owlCarousel({
+      responsive: {
+        0: {
+          items: 1
+        },
+        425: {
+          items: 3
+        },
+        768: {
+          items: 5
+        },
+        991: {
+          items: 7
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      smartSpeed: 300,
+      dots: false,
+      nav: true,
+      navText: ["<img src='./assets/icons/icon-arrow-circle-left-white.svg'>","<img src='./assets/icons/icon-arrow-circle-right-white.svg'>"],
+      center: true,
+      margin: 15,
+    });
+
+    const configCurrentIndex = (value) => {
+      carouselControl.on('changed.owl.carousel', function(e) {
+        const currentIndex = e.item.index + value
+        carouselView.trigger('to.owl.carousel', [currentIndex, 200]);
+      })
+    }
+    if (window.innerWidth > 990) configCurrentIndex(2)
+    else configCurrentIndex(4)
   },
 }
 
@@ -282,5 +362,24 @@ const modalCustom = {
         body.style.overflow = 'auto'
       })
     }
+  }
+}
+
+const modalImage = {
+  init: function() {
+    this.configGalleryImage()
+  },
+  configGalleryImage() {
+    $('.js-gallery-item').magnificPopup({
+      type: 'image',
+      showCloseBtn: false,
+      removalDelay: 300,
+      gallery:{
+        enabled: true,
+        arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"><img class="mfp-custom-arrow %dir%" src="./assets/icons/icon-arrow-circle-left-white.svg"></button>',
+        tCounter: '',
+      }
+    });
+    // magnificPopup.goTo(4)
   }
 }

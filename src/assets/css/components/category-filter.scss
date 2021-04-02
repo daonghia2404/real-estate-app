@@ -1,0 +1,8 @@
+.category-filter {
+  @include box-shadow;
+  background: $footer;
+  padding: 20px;
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+}
