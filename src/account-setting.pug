@@ -1,0 +1,14 @@
+extends includes/layout/authen-layout.pug
+block pages 
+  section.section.section-account 
+    .container 
+      .section-wrapper 
+        .tab-wrapper
+          .row 
+            .col-lg-4
+              include includes/components/account-sidebar.pug
+            .col-lg-8
+              .tab-main-group 
+                .tab-item.active
+                  include includes/components/account-infomation.pug
+                .tab-item

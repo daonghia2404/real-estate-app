@@ -1,0 +1,48 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		title Real Estate App
+
+		//- Bootstrap CSS
+		link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css")
+
+		//- OwlCarousel CSS
+		link(rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css")
+
+		//- Magnific CSS
+		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css")
+
+		//- Style CSS
+		link(rel="stylesheet" type="text/css" href="./assets/css/main.css")
+
+		block head
+
+	body
+		include header-authen.pug
+		block pages
+		include footer.pug
+
+		//- jQuery
+		script(src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js") 
+
+		//- Bootstrap JS
+		script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js") 
+
+		//- OwlCarousel JS
+		script(src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js") 
+
+		//- Magnific JS
+		script(src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js")
+
+		//- CkEditor JS
+		script(src="https://cdn.jsdelivr.net/npm/ckeditor4@4.16.0/ckeditor.js") 
+
+		block scripts
+		
+		//- Java Script
+		script(src="./assets/js/main.js")
+
+

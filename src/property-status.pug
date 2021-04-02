@@ -1,0 +1,180 @@
+extends includes/layout/authen-layout.pug
+block pages 
+  -
+    const dataProperties = [
+      {
+        id: 1,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'unactive',
+          title: 'Not available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 2,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'active',
+          title: 'Available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 3,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'unactive',
+          title: 'Not available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 4,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'active',
+          title: 'Available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 5,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'unactive',
+          title: 'Not available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 6,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'active',
+          title: 'Available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+    ]
+  section.section.section-property-status 
+    .container 
+      p.content-orange Below is the latest real estate news we get regularly updated from reliable sources.
+
+      .project-detail-card
+        h3.project-title Filters 
+        .filter-close 
+          img(src="./assets/icons/icon-close-circle-orange.svg", alt="")
+        form(action="#" method="method").custom-style-form
+          .form-group.forth 
+            .form-item 
+              label.big.black Select fields
+              .form-select 
+                select.custom-select
+                  option(value="#") Select
+            .form-item 
+              label.big.black Is equal to
+              .form-select 
+                select.custom-select
+                  option(value="#") Select
+            .form-item 
+              label.big.black Value
+              .form-input 
+                input(type="text" placeholder="Value").no-radius
+            .form-item 
+
+          .form-group.d-flex.button-group.flex-wrap.mb-0
+            .form-item 
+              .form-button 
+                button.yellow Add addition filter
+            .form-item 
+              .form-button 
+                button.orange APPLY
+
+      .project-detail-card
+        form(action="#" method="method").custom-style-form.d-flex.justify-content-between.table-filter-header
+          .form-group.half 
+            .form-item.mr-2
+              .form-button 
+                button.blue.radius Filter
+            .form-item 
+              .form-input.search.d-flex.align-items-center.radius
+                img(src="./assets/icons/icon-search-orange.svg", alt="")
+                input(type="text" placeholder="Tìm kiếm")
+          .form-group 
+            .form-item 
+              .form-button 
+                button.blue.radius Reload
+
+        .table-wrapper
+          table 
+            thead 
+              tr 
+                td.nowrap.center ID
+                td.nowrap.center IMAGE
+                td.nowrap.center NAME
+                td.nowrap.center CREATED AT
+                td.nowrap.center STATUS
+                td.nowrap.center MODERATION STATUS
+                td.nowrap.center EXPIRE DATE
+                td.nowrap.center OPERATIONS
+            tbody 
+              each item in dataProperties 
+                tr 
+                  td.nowrap.center= item.id
+                  td.min-width-content 
+                    .table-image 
+                      img(src=`${item.image}`, alt="")
+                  td.center.min-width-content= item.name 
+                  td.center= item.createdAt 
+                  td 
+                    .table-tag.d-flex.justify-content-center
+                      .tag-item(class=`${item.status.state}`)= item.status.title
+                  td 
+                    .table-tag.d-flex.justify-content-center
+                      .tag-item(class=`${item.moderStatus.state}`)= item.moderStatus.title
+                  td.center= item.expireDate 
+                  td 
+                    .table-action.d-flex.justify-content-between
+                      .action-item.edit 
+                        img(src="./assets/icons/icon-edit-white.svg", alt="")
+                      .action-item.shopping-bag 
+                        img(src="./assets/icons/icon-shopping-bag-white.svg", alt="")
+                      .action-item.reload 
+                        img(src="./assets/icons/icon-reload-white.svg", alt="")

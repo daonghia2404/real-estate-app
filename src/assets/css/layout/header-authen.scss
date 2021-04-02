@@ -1,0 +1,75 @@
+header.header-authen {
+  background: $white;
+  .header-wrapper {
+    position: relative;
+    height: 65px;
+  }
+  .header-item {
+    .header-logo {
+      max-width: 145px;
+      img {
+        width: 100%;
+      }
+    }
+    .header-account,
+    .header-link {
+      margin-right: 25px;
+      a {
+        font-size: 15px;
+        font-weight: 500;
+        color: $primary;
+        transition: 0.3s ease;
+        &:hover,
+        &.active {
+          color: $secondary;
+        }
+      }
+    }
+    .avatar {
+      margin-left: 10px;
+    }
+  }
+  .header-btn-mobile {
+    display: none;
+    width: 20px;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+  .header-menu-wrapper {
+    @media (max-width: 991px) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: $white;
+      width: 100%;
+      z-index: 10;
+      flex-direction: column;
+      padding: 0px 15px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      align-items: flex-start !important;
+      @include box-shadow;
+      max-height: 0;
+      transition: 0.3s ease;
+      overflow: hidden;
+      &.active {
+        padding: 10px 15px;
+        max-height: 100vh;
+      }
+      .header-account,
+      .header-link {
+        width: 100%;
+        padding: 5px 0;
+        margin-right: 0;
+      }
+      .header-write-properties {
+        width: 100%;
+      }
+    }
+  }
+}

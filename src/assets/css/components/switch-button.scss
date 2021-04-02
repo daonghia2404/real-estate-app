@@ -1,0 +1,40 @@
+.switch-btn {
+  border-radius: 25px;
+  border: 1px solid $blue;
+  width: 80px;
+  height: 35px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  &.active {
+    .switch-btn-wrapper {
+      left: 15px;
+    }
+  }
+
+  .switch-btn-wrapper {
+    pointer-events: none;
+    width: 160px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease;
+    left: -28px;
+    
+    span {
+      font-size: 14px;
+      color: $blue;
+      font-weight: bold;
+      transform: translateY(-1px);
+    }
+    .circle {
+      max-width: 25px;
+      flex: 0 0 25px;
+      height: 25px;
+      background: $blue;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+  }
+}

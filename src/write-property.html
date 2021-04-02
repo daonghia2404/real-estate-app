@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Real Estate App</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+  </head>
+  <body>
+    <header class="header-authen"> 
+      <div class="container"> 
+        <div class="header-wrapper d-flex align-items-center justify-content-between"> 
+          <div class="header-item"> 
+            <div class="header-logo"> <img src="./assets/images/logo.svg" alt=""></div>
+          </div>
+          <div class="header-item d-flex align-items-center header-menu-wrapper">
+            <div class="header-account d-flex align-items-center"> <a class="account-name" href="#">User Name</a>
+              <div class="avatar"> <img src="./assets/images/image-avatar.png" alt=""></div>
+            </div>
+            <div class="header-link d-flex align-items-center"> <a href="#">Settings</a></div>
+            <div class="header-link d-flex align-items-center"> <a href="#">Buy Credits</a><a class="secondary small ml-2 button-component d-flex align-items-center justify-content-center" href="#"><span class="button-title">1 credit</span></a>
+            </div>
+            <div class="header-link d-flex align-items-center"> <a href="#">Properties</a></div><a class="secondary header-write-properties button-component d-flex align-items-center justify-content-center" href="#"><img class="button-icon" src="./assets/icons/icon-edit-white.svg" alt=""><span class="button-title">Write a property</span></a>
+          </div>
+          <div class="header-btn-mobile"> <img src="./assets/icons/icon-bar-blue.svg" alt=""></div>
+        </div>
+      </div>
+    </header>
+    <section class="section section-write-property section-property-status">
+      <div class="container"> 
+        <p class="content-orange">Below is the latest real estate news we get regularly updated from reliable sources.</p>
+        <div class="section-main"> 
+          <div class="row"> 
+            <div class="col-lg-8"> 
+              <div class="project-detail-card">
+                <h3 class="project-title">write a property</h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black">Title (*)</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Title">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black">Type (*)</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Type">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black d-flex align-items-center justify-content-between">Description (*)<span>(350 character(s) remain)</span></label>
+                      <div class="form-textarea"> 
+                        <textarea class="radius" placeholder="Description"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black">Content (*)</label>
+                      <div class="form-ckeditor"> 
+                        <textarea id="ckEditor-input" rows="10" cols="80"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black">Images (*)</label>
+                      <div class="form-upload"> 
+                        <div class="upload-wrapper">
+                          <input type="file">Drop files here or click to upload
+                        </div>
+                        <div class="upload-item d-flex flex-wrap"> 
+                          <div class="item"><img src="./assets/images/image-avatar.png" alt=""></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black">City (*)</label>
+                      <div class="form-select"> 
+                        <select class="custom-select radius">
+                          <option value="#">WAP City</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black">Property location (*)</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Property location">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group half">
+                    <div class="form-item"> 
+                      <label class="bold black">Latitude (*)</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Ex: 12345">
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <label class="bold black">Longitude (*)</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Ex: 103.812530">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group forth">
+                    <div class="form-item"> 
+                      <label class="bold black">Number bedrooms</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Number bedrooms">
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <label class="bold black">Number bathrooms</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Number bathrooms">
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <label class="bold black">Number floors</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Number floors">
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <label class="bold black">Square (m2)</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Square (m2)">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group half">
+                    <div class="form-item"> 
+                      <label class="bold black">Price</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="Price">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item d-flex align-items-center switch-btn-input-wrapper">
+                          <div class="switch-btn active mr-2">
+                            <div class="switch-btn-wrapper d-flex align-items-center"><span>ON </span>
+                              <div class="circle"> </div><span>OFF</span>
+                            </div>
+                          </div>
+                      <label class="bold black">Renew automatically (you will be charged again in 45 days)?</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="project-detail-card">
+                <h3 class="project-title">write a property</h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group"> 
+                    <div class="form-item"> 
+                      <div class="form-select-option d-flex align-items-center flex-wrap">
+                        <div class="option-item">Select facility</div>
+                        <div class="option-item">Distance(km)</div>
+                        <div class="option-remove"> <img src="./assets/icons/icon-remove-red.svg" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group d-flex">
+                    <div class="form-item"> 
+                      <div class="form-button"> 
+                        <button class="yellow">Add New</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item d-flex align-items-center switch-btn-input-wrapper">
+                          <div class="switch-btn mr-2">
+                            <div class="switch-btn-wrapper d-flex align-items-center"><span>ON </span>
+                              <div class="circle"> </div><span>OFF</span>
+                            </div>
+                          </div>
+                      <label class="bold black">Renew automatically (you will be charged again in 45 days)?</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="project-detail-card">
+                <h3 class="project-title">Features</h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group d-flex mb-0 flex-wrap">
+                    <div class="form-item"> 
+                      <div class="form-checkbox"> 
+                        <input type="checkbox" id="wifi">
+                        <label for="wifi">Wifi</label>
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <div class="form-checkbox"> 
+                        <input type="checkbox" id="swimming-pool">
+                        <label for="swimming-pool">Swimming Pool</label>
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <div class="form-checkbox"> 
+                        <input type="checkbox" id="parking">
+                        <label for="parking">Parking</label>
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <div class="form-checkbox"> 
+                        <input type="checkbox" id="garden">
+                        <label for="garden">Garden</label>
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <div class="form-checkbox"> 
+                        <input type="checkbox" id="fitness-center">
+                        <label for="fitness-center">Fitness Center</label>
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <div class="form-checkbox"> 
+                        <input type="checkbox" id="security">
+                        <label for="security">Security</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="project-detail-card">
+                <h3 class="project-title">SEO</h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group">
+                    <div class="form-item"> 
+                      <label class="bold black">SEO Title (*)</label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="SEO Title">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-0">
+                    <div class="form-item"> 
+                      <label class="bold black d-flex align-items-center justify-content-between">SEO description (*)<span>(350 character(s) remain)</span></label>
+                      <div class="form-input"> 
+                        <input type="text" placeholder="SEO description">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="project-detail-card">
+                <h3 class="project-title">Publish </h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group half mb-0">
+                    <div class="form-item"> 
+                      <div class="form-button"> 
+                        <button class="yellow">Save</button>
+                      </div>
+                    </div>
+                    <div class="form-item"> 
+                      <div class="form-button"> 
+                        <button class="orange">Save and Edit</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="project-detail-card">
+                <h3 class="project-title">Status </h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group mb-0"> 
+                    <div class="form-item"> 
+                      <div class="form-select"> 
+                        <select class="custom-select radius">
+                          <option value="#">Not available</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="project-detail-card">
+                <h3 class="project-title">Category </h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group mb-0"> 
+                    <div class="form-item"> 
+                      <div class="form-select"> 
+                        <select class="custom-select radius">
+                          <option value="#">Apartment</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="project-detail-card">
+                <h3 class="project-title">Project </h3>
+                <form class="custom-style-form" action="#" method="method">
+                  <div class="form-group mb-0"> 
+                    <div class="form-item"> 
+                      <div class="form-select"> 
+                        <select class="custom-select radius">
+                          <option value="#">Select a project</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer"> 
+      <div class="container"> 
+        <div class="footer-wrapper"> 
+          <div class="row"> 
+            <div class="col-lg-5 col-sm-6 footer-col"><a class="footer-logo" href="#"><img src="./assets/images/logo-square.png" alt=""></a>
+              <div class="footer-infomation"> <a class="infomation-item d-flex align-items-center" href="#"> <img src="./assets/icons/icon-location-blue.svg" alt="">North Link Building, 10 Admiralty Street, 757695 Singapore</a><a class="infomation-item d-flex align-items-center" href="to: 18006268"> <img src="./assets/icons/icon-phone-blue.svg" alt="">Hotline: 1800 6268</a><a class="infomation-item d-flex align-items-center" href="mailto: contact@anphatland.com"> <img src="./assets/icons/icon-mail-blue.svg" alt="">Email:  contact@flex-home.com</a></div>
+            </div>
+            <div class="col-lg-2 col-sm-6 footer-col">
+              <h4 class="footer-title">About</h4>
+              <div class="footer-lists"><a class="list-item" href="#">About us</a><a class="list-item" href="#">Contact us</a><a class="list-item" href="#">Careers</a><a class="list-item" href="#">Terms &amp; Conditions</a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 footer-col">
+              <h4 class="footer-title">MORE INFORMATION</h4>
+              <div class="footer-lists"><a class="list-item" href="#">All projects</a><a class="list-item" href="#">All properties</a><a class="list-item" href="#">Houses for sale</a><a class="list-item" href="#">Houses for rent</a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 footer-col">
+              <h4 class="footer-title">NEWS</h4>
+              <div class="footer-lists"><a class="list-item" href="#">Latest news</a><a class="list-item" href="#">House architecture</a><a class="list-item" href="#">House design</a><a class="list-item" href="#">Building materials</a>
+              </div>
+            </div>
+            <div class="col-12"> 
+              <div class="footer-bottom"> 
+                <p>© 2020 Flex Home is Proudly Powered by Botble Team</p>
+                <div class="footer-btn-group d-flex align-items-center"> <a class="secondary button-component d-flex align-items-center justify-content-center" href="#"><img class="button-icon" src="./assets/icons/icon-phone-white.svg" alt=""><span class="button-title">1900 9669</span></a><a class="messenger button-component d-flex align-items-center justify-content-center" href="#"><img class="button-icon" src="./assets/icons/icon-messenger-white.svg" alt=""><span class="button-title">Messenger</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ckeditor4@4.16.0/ckeditor.js"> </script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

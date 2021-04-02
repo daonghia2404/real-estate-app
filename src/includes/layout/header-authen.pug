@@ -1,0 +1,27 @@
+include ../components/button.pug
+header.header-authen 
+  .container 
+    .header-wrapper.d-flex.align-items-center.justify-content-between 
+      .header-item 
+        .header-logo 
+          img(src="./assets/images/logo.svg", alt="") 
+      .header-item.d-flex.align-items-center.header-menu-wrapper
+        .header-account.d-flex.align-items-center 
+          a(href="#").account-name User Name
+          .avatar 
+            img(src="./assets/images/image-avatar.png", alt="")
+        
+        .header-link.d-flex.align-items-center 
+          a(href="#") Settings
+
+        .header-link.d-flex.align-items-center 
+          a(href="#") Buy Credits
+          +button('link', '1 credit', '', 'secondary small ml-2')  
+
+        .header-link.d-flex.align-items-center 
+          a(href="#") Properties
+
+        +button('link', 'Write a property', './assets/icons/icon-edit-white.svg', 'secondary header-write-properties')
+
+      .header-btn-mobile 
+        img(src="./assets/icons/icon-bar-blue.svg", alt="")

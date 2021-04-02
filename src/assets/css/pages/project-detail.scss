@@ -29,18 +29,6 @@
   }
 
   .project-detail-card {
-    background: $white;
-    @include box-shadow;
-    border-radius: 4px;
-    padding: 15px;
-    margin-bottom: 30px;
-    .project-title {
-      font-size: 16px;
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: $primary;
-    }
     .overview-column {
       .overview-item {
         padding: 10px 0;
@@ -249,5 +237,20 @@
         }
       }
     }
+  }
+}
+
+.project-detail-card {
+  background: $white;
+  @include box-shadow;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 30px;
+  .project-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: $primary;
   }
 }

@@ -1,0 +1,59 @@
+.section-property-status {
+  .content-orange {
+    border-radius: 4px;
+    background: $secondary-transparent;
+    color: $secondary;
+    padding: 25px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  .project-detail-card {
+    position: relative;
+
+    .filter-close {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      width: 24px;
+      cursor: pointer;
+
+      img {
+        width: 100;
+      }
+    }
+    .button-group {
+      .form-item {
+        margin-right: 10px;
+        min-width: 140px;
+        @media (max-width: 575px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    .table-filter-header {
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+      .form-group:nth-of-type(1) {
+        flex: 1;
+        .form-input.search {
+          max-width: 320px;
+          background: $input;
+          @media (max-width: 768px) {
+            max-width: 100%;
+          }
+        }
+        .form-item {
+          flex: 0 0 auto;
+          max-width: 100%;
+          &:nth-of-type(2) {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+}

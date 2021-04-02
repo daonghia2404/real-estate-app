@@ -6,6 +6,8 @@ window.onload = () => {
   tabBasicEvent.init()
   modalCustom.init()
   modalImage.init()
+  switchBtn.init()
+  ckEditor4.init()
 }
 
 const clickEvent = {
@@ -381,5 +383,26 @@ const modalImage = {
       }
     });
     // magnificPopup.goTo(4)
+  }
+}
+
+const switchBtn = {
+  init: function() {
+    this.config()
+  },
+  config: function() {
+    const btn = document.querySelectorAll('.switch-btn')
+    btn.forEach((item) => item.addEventListener('click', () => {
+      item.classList.toggle('active')
+    }))
+  }
+}
+
+const ckEditor4 = {
+  init: function () {
+    this.config()
+  },
+  config: function() {
+    CKEDITOR.replace('ckEditor-input')
   }
 }

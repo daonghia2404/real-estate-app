@@ -41,7 +41,7 @@
 
   &.secondary {
     background: $secondary;
-    color: $white;
+    color: $white !important;
     &:hover {
       background: darken($secondary, 5%);
     }
@@ -88,8 +88,13 @@
     color: $primary-dark;
   }
 
+  &.small {
+    font-size: 13px !important;
+    padding: 3px 7px;
+  }
+
   @media (max-width: 768px) {
-    font-size: 13px;
+    font-size: 13px !important;
     padding: 7px 10px;
     .button-icon {
       width: 12px;

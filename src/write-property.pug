@@ -1,0 +1,192 @@
+extends includes/layout/authen-layout.pug
+block pages 
+  include includes/components/switch-button.pug
+  -
+    const dataCheckboxFeatures = [
+      { unique: 'wifi', title: 'Wifi' },
+      { unique: 'swimming-pool', title: 'Swimming Pool' },
+      { unique: 'parking', title: 'Parking' },
+      { unique: 'garden', title: 'Garden' },
+      { unique: 'fitness-center', title: 'Fitness Center' },
+      { unique: 'security', title: 'Security' },
+    ]
+
+  section.section.section-write-property.section-property-status
+    .container 
+      p.content-orange Below is the latest real estate news we get regularly updated from reliable sources.
+
+      .section-main 
+        .row 
+          .col-lg-8 
+            .project-detail-card
+              h3.project-title write a property
+              form(action="#" method="method").custom-style-form
+                .form-group
+                  .form-item 
+                    label.bold.black Title (*)
+                    .form-input 
+                      input(type="text" placeholder="Title")
+                .form-group
+                  .form-item 
+                    label.bold.black Type (*)
+                    .form-input 
+                      input(type="text" placeholder="Type")
+                .form-group
+                  .form-item 
+                    label.bold.black.d-flex.align-items-center.justify-content-between
+                      |Description (*)
+                      span (350 character(s) remain)
+                    .form-textarea 
+                      textarea(placeholder="Description").radius
+                .form-group
+                  .form-item 
+                    label.bold.black Content (*)
+                    .form-ckeditor 
+                      textarea#ckEditor-input(rows="10" cols="80")
+
+                .form-group
+                  .form-item 
+                    label.bold.black Images (*)
+                    .form-upload 
+                      .upload-wrapper
+                        input(type="file") 
+                        |Drop files here or click to upload
+                      .upload-item.d-flex.flex-wrap 
+                        .item
+                          img(src="./assets/images/image-avatar.png", alt="")
+                .form-group
+                  .form-item 
+                    label.bold.black City (*)
+                    .form-select 
+                      select.custom-select.radius
+                        option(value="#") WAP City
+                .form-group
+                  .form-item 
+                    label.bold.black Property location (*)
+                    .form-input 
+                      input(type="text" placeholder="Property location")
+                .form-group.half
+                  .form-item 
+                    label.bold.black Latitude (*)
+                    .form-input 
+                      input(type="text" placeholder="Ex: 12345")
+                  .form-item 
+                    label.bold.black Longitude (*)
+                    .form-input 
+                      input(type="text" placeholder="Ex: 103.812530")
+                .form-group.forth
+                  .form-item 
+                    label.bold.black Number bedrooms
+                    .form-input 
+                      input(type="text" placeholder="Number bedrooms")
+                  .form-item 
+                    label.bold.black Number bathrooms
+                    .form-input 
+                      input(type="text" placeholder="Number bathrooms")
+                  .form-item 
+                    label.bold.black Number floors
+                    .form-input 
+                      input(type="text" placeholder="Number floors")
+                  .form-item 
+                    label.bold.black Square (m2)
+                    .form-input 
+                      input(type="text" placeholder="Square (m2)")
+                .form-group.half
+                  .form-item 
+                    label.bold.black Price
+                    .form-input 
+                      input(type="text" placeholder="Price")
+                .form-group
+                  .form-item.d-flex.align-items-center.switch-btn-input-wrapper
+                    +switchBtn('active mr-2')
+                    label.bold.black Renew automatically (you will be charged again in 45 days)?
+
+            .project-detail-card
+              h3.project-title write a property
+              form(action="#" method="method").custom-style-form
+                .form-group 
+                  .form-item 
+                    .form-select-option.d-flex.align-items-center.flex-wrap
+                      .option-item Select facility
+                      .option-item Distance(km)
+                      .option-remove 
+                        img(src="./assets/icons/icon-remove-red.svg", alt="")
+                  
+                .form-group.d-flex
+                  .form-item 
+                    .form-button 
+                      button.yellow Add New
+
+                .form-group
+                  .form-item.d-flex.align-items-center.switch-btn-input-wrapper
+                    +switchBtn('mr-2')
+                    label.bold.black Renew automatically (you will be charged again in 45 days)?
+
+            .project-detail-card
+              h3.project-title Features
+              form(action="#" method="method").custom-style-form
+                .form-group.d-flex.mb-0.flex-wrap
+                  each item in dataCheckboxFeatures
+                    .form-item 
+                      .form-checkbox 
+                        input(type="checkbox" id=`${item.unique}`)
+                        label(for=`${item.unique}`)= item.title
+
+            .project-detail-card
+              h3.project-title SEO
+              form(action="#" method="method").custom-style-form
+                .form-group
+                  .form-item 
+                    label.bold.black SEO Title (*)
+                    .form-input 
+                      input(type="text" placeholder="SEO Title")
+                .form-group.mb-0
+                  .form-item 
+                    label.bold.black.d-flex.align-items-center.justify-content-between
+                      |SEO description (*)
+                      span (350 character(s) remain)
+                    .form-input 
+                      input(type="text" placeholder="SEO description")
+
+          .col-lg-4
+            .project-detail-card
+              h3.project-title Publish 
+              form(action="#" method="method").custom-style-form
+                .form-group.half.mb-0
+                  .form-item 
+                    .form-button 
+                      button.yellow Save
+                  .form-item 
+                    .form-button 
+                      button.orange Save and Edit
+
+            .project-detail-card
+              h3.project-title Status 
+              form(action="#" method="method").custom-style-form
+                .form-group.mb-0 
+                  .form-item 
+                    .form-select 
+                      select.custom-select.radius
+                        option(value="#") Not available
+
+            .project-detail-card
+              h3.project-title Category 
+              form(action="#" method="method").custom-style-form
+                .form-group.mb-0 
+                  .form-item 
+                    .form-select 
+                      select.custom-select.radius
+                        option(value="#") Apartment
+
+            .project-detail-card
+              h3.project-title Project 
+              form(action="#" method="method").custom-style-form
+                .form-group.mb-0 
+                  .form-item 
+                    .form-select 
+                      select.custom-select.radius
+                        option(value="#") Select a project
+                      
+                      
+                      
+            
