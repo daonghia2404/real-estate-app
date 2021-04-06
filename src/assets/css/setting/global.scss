@@ -130,9 +130,11 @@ form.custom-style-form {
 				label {
 					margin-bottom: 0;
 				}
+
 				@media (max-width: 575px) {
 					flex-direction: column;
 					align-items: flex-start !important;
+
 					.switch-btn {
 						margin-bottom: 10px;
 					}
@@ -230,6 +232,7 @@ form.custom-style-form {
 					font-weight: 500;
 					margin-bottom: 0;
 				}
+
 				input {
 					margin-right: 5px;
 					width: 24px;
@@ -249,12 +252,14 @@ form.custom-style-form {
 					font-size: 10px 20px;
 					color: $gray;
 					cursor: pointer;
+
 					&:hover,
 					&.active {
 						border-color: $primary;
 						color: $primary;
 					}
 				}
+
 				.option-remove {
 					width: 25px;
 					height: 25px;
@@ -262,11 +267,13 @@ form.custom-style-form {
 					display: flex;
 					box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
 					cursor: pointer;
+
 					img {
 						width: 18px;
 						margin: auto;
 					}
 				}
+
 				&:hover,
 				&.active {
 					border-color: $primary;
@@ -328,6 +335,8 @@ form.custom-style-form {
 				}
 			}
 
+
+
 			.form-button {
 				button {
 					width: 100%;
@@ -359,10 +368,23 @@ form.custom-style-form {
 			}
 		}
 
-		.form-error {
-			font-size: 12px;
-			color: $red;
+		.error {
+			select,
+			input,
+			textarea {
+				border-color: $red !important;
+			}
+
+			.form-error {
+				margin-top: 5px;
+				font-size: 12px;
+				color: $red;
+				font-weight: 600;
+
+			}
 		}
+
+
 	}
 }
 

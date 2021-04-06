@@ -5,6 +5,7 @@
         @include box-shadow;
         background: $white;
         margin-bottom: 30px;
+        overflow: auto;
         .tab-item {
           font-size: 15px;
           margin-right: 40px;
@@ -17,6 +18,12 @@
           color: $primary;
           border-bottom: 2px solid transparent;
           text-transform: unset;
+          white-space: nowrap;
+
+          @media (max-width: 575px) {
+            font-size: 13px;
+            margin-right: 15px;
+          }
 
           &:hover,
           &.active {
@@ -252,5 +259,52 @@
     font-weight: bold;
     margin-bottom: 15px;
     color: $primary;
+  }
+}
+
+.section-project-detail-bang-hang {
+  .deposit-main {
+    margin: 0 -10px;
+    @media (max-width: 575px) {
+      margin: 0;
+    }
+    .deposit-item {
+      flex: 0 0 calc(100% / 5 - 30px);
+      max-width: calc(100% / 5 - 30px);
+      margin-bottom: 15px;
+
+      @media (max-width: 1200px) {
+        flex: 0 0 calc(100% / 4 - 30px);
+        max-width: calc(100% / 4 - 30px);
+      }
+
+      @media (max-width: 991px) {
+        flex: 0 0 calc(100% / 3 - 30px);
+        max-width: calc(100% / 3 - 30px);
+      }
+
+      @media (max-width: 768px) {
+        flex: 0 0 calc(100% / 2 - 30px);
+        max-width: calc(100% / 2 - 30px);
+      }
+
+      @media (max-width: 575px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin: 0 0 15px 0;
+      }
+
+      .item-main {
+        padding: 0 8px;
+        p {
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 0;
+          &:not(:last-of-type) {
+            border-bottom: 1px solid $border;
+          }
+        }
+      }
+    }
   }
 }

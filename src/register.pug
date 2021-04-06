@@ -1,0 +1,56 @@
+extends includes/layout/authen-layout.pug
+block pages 
+  section.section.section-authen
+    .container
+      form(action="#").authen-form.custom-style-form
+        h5.authen-title Register 
+        .form-group
+          .form-item 
+            .form-input 
+              input(type="text" placeholder="First Name")
+        .form-group
+          .form-item 
+            .form-input 
+              input(type="text" placeholder="Last Name")
+        .form-group
+          .form-item 
+            .form-input 
+              input(type="text" placeholder="User Name")
+        .form-group
+          .form-item 
+            .form-input 
+              input(type="text" placeholder="Email")
+        .form-group
+          .form-item 
+            .form-input.error
+              input(type="Password" placeholder="Password")
+              p.form-error The pasword field is required.
+        .form-group
+          .form-item 
+            .form-input
+              input(type="Password" placeholder="Confirm Password")
+
+        .form-group.half.mb-4.action-for-password
+          .form-item 
+            .form-checkbox
+              input(type="checkbox" id="remember-password")
+              label(for="remember-password") Remember me
+          .form-item.text-right
+            a(href="#") Forgot my password?
+
+        .form-group 
+          .form-item 
+            .form-button.mb-2 
+              button.yellow REGISTER
+            p.text-center.mb-4 Have an account? #[a(href="#") Login]
+            p.text-center Don’t have an account? #[a(href="#") Register a new account]
+
+        
+        .form-group.mb-0
+          .form-social-network.d-flex.align-items-center.justify-content-center 
+            a(href="#").social-item.facebook
+              img(src="./assets/icons/icon-facebook-f-white.svg", alt="")
+            a(href="#").social-item.google
+              img(src="./assets/icons/icon-google-white.svg", alt="")
+            a(href="#").social-item.send
+              img(src="./assets/icons/icon-send-white.svg", alt="")

@@ -1,0 +1,17 @@
+section.section-project-detail-bang-hang 
+  .section-wrapper 
+    .deposit-main.d-flex.flex-wrap
+      each item, index in ['primary-dark', 'grey-dark', 'blue', 'green-dark', 'red-dark', 'primary-dark', 'green-dark', 'blue', 'red-dark','red-dark','red-dark','blue', 'red-dark','red-dark','primary-dark', 'blue','red-dark','primary-dark', 'green-dark', 'grey-dark']
+        .deposit-item(class=`${item}`)#open-deposit-modal-detail.header-overlay
+          .item-header.d-flex
+            .item-number.d-flex.align-items-center.justify-content-center= index + 1
+            .item-price.d-flex.align-items-center.justify-content-center 2,340 tỷ
+          .item-main 
+            p Mã căn: #[span A2/69]
+            p Đường: #[span 11.5m]
+            p Loại mẫu nhà: #[span Song lập]
+            p Mã mẫu nhà: #[span GLAMOURA A]
+            p Số tầng: #[span 2 + TUM]
+            p Kích thước lô (m): #[span 11.5 x 22.4]
+            p View: #[span Cardi B]
+            p Hướng mặt tiền lô đất: #[span Trước]

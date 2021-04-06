@@ -22,7 +22,7 @@ block pages
       .tab-wrapper 
         .tab-group 
           .container
-            .d-flex.flex-wrap
+            .d-flex
               .tab-item.active Tổng quan
               .tab-item Chủ đầu tư
               .tab-item Vị trí
@@ -40,6 +40,7 @@ block pages
             .tab-item
             .tab-item
             .tab-item
+              include includes/components/project-detail-bang-hang.pug
 
   include includes/components/section-product-box.pug
   +sectionProductBox('Dự án liên quan', 'Below is the latest real estate news we get regularly updated from reliable sources.', dataProducts)

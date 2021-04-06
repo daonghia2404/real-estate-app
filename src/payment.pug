@@ -1,0 +1,37 @@
+extends includes/layout/authen-layout.pug
+block pages 
+  - const page = 'payment'
+  section.section.section-account 
+    .container 
+      .section-wrapper 
+        .tab-wrapper
+          .row 
+            .col-lg-4
+              include includes/components/account-sidebar.pug
+            .col-lg-8
+              .account-infomation.project-detail-card
+                h3.project-title Packages
+                .infomation-main 
+                  .row 
+                    .col-lg-8
+                      form(action="#" method="method").custom-style-form
+                        .form-group
+                          .form-item 
+                            label.black.big First name
+                            .form-input 
+                              input(type="text" placeholder="First name").radius
+                        .form-group
+                          .form-item 
+                            label.black.big Last name
+                            .form-input 
+                              input(type="text" placeholder="Last name").radius
+                        .form-group
+                          .form-item 
+                            label.black.big User name
+                            .form-input 
+                              input(type="text" placeholder="User name").radius
+                        .form-group
+                          .form-item 
+                            label.black.big Phone
+                            .form-input 
+                              input(type="text" placeholder="Phone").radius

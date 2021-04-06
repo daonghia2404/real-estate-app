@@ -1,0 +1,149 @@
+extends includes/layout/authen-layout.pug
+block pages 
+  -
+    const page = 'overview'
+    const dataProperties = [
+      {
+        id: 1,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'unactive',
+          title: 'Not available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 2,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'active',
+          title: 'Available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 3,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'unactive',
+          title: 'Not available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 4,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'active',
+          title: 'Available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 5,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'unactive',
+          title: 'Not available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+      {
+        id: 6,
+        image: './assets/images/image-table.png',
+        name: 'Whore in the house',
+        createdAt: '2021-18-03',
+        status: {
+          state: 'active',
+          title: 'Available',
+        },
+        moderStatus: {
+          state: 'pending',
+          title: 'Pending',
+        },
+        expireDate: '2021-18-03',
+      },
+    ]
+  section.section.section-account 
+    .container 
+      .section-wrapper 
+        .tab-wrapper
+          .row 
+            .col-lg-4
+              include includes/components/account-sidebar.pug
+            .col-lg-8
+              .account-overview-wrapper.d-flex.flex-wrap.justify-content-between 
+                .overview-item.blue.d-flex.flex-column.justify-content-center
+                  .item-header.d-flex.align-items-center.justify-content-between 
+                    .item-number 23
+                    .item-icon 
+                      img(src="./assets/icons/icon-check-circle-white.svg", alt="")
+                  p.item-des Approved properties
+                .overview-item.orange.d-flex.flex-column.justify-content-center
+                  .item-header.d-flex.align-items-center.justify-content-between 
+                    .item-number 23
+                    .item-icon 
+                      img(src="./assets/icons/icon-users-white.svg", alt="")
+                  p.item-des Pending approve properties
+                .overview-item.red.d-flex.flex-column.justify-content-center
+                  .item-header.d-flex.align-items-center.justify-content-between 
+                    .item-number 23
+                    .item-icon 
+                      img(src="./assets/icons/icon-edit-rect-white.svg", alt="")
+                  p.item-des Rejected properties
+
+              .project-detail-card 
+                .table-wrapper
+                  table 
+                    thead 
+                      tr 
+                        td.nowrap.center ID
+                        td.nowrap.center NAME
+                        td.nowrap.center CREATED AT
+                        td.nowrap.center STATUS
+                        td.nowrap.center MODERATION STATUS
+                        td.nowrap.center EXPIRE DATE
+                    tbody 
+                      each item in dataProperties 
+                        tr 
+                          td.nowrap.center= item.id
+                          td.center.min-width-content= item.name 
+                          td.center= item.createdAt 
+                          td 
+                            .table-tag.d-flex.justify-content-center
+                              .tag-item(class=`${item.status.state}`)= item.status.title
+                          td 
+                            .table-tag.d-flex.justify-content-center
+                              .tag-item(class=`${item.moderStatus.state}`)= item.moderStatus.title
+                          td.center= item.expireDate 
+                          

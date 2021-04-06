@@ -1,0 +1,68 @@
+section.section.section-authen {
+  background: $footer;
+  padding: 60px 0;
+  .authen-form {
+    @include box-shadow;
+    border-radius: 4px;
+    background: $white;
+    padding: 40px 45px;
+    width: 550px;
+    margin: 0 auto;
+    @media (max-width: 575px) {
+      width: 100%;
+      padding: 40px 15px;
+    }
+    .form-checkbox {
+      input {
+        width: 16px !important;
+        height: 16px !important;
+      }
+    }
+    .form-input input {
+      border-radius: 4px !important;
+    }
+    @media (max-width: 575px) {
+      .action-for-password {
+        .form-item {
+          display: flex;
+          justify-content: center;
+          text-align: center !important;
+        }
+      }
+    }
+  }
+  .authen-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 30px;
+  }
+  .form-social-network {
+    margin-top: 30px;
+    .social-item {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      margin: 0 10px;
+      &.facebook {
+        background: #2F80ED;
+        img {
+          width: 10px;
+        }
+      }
+      &.google {
+        background: #EB5757;
+      }
+      &.send {
+        background: #F2994A;
+      }
+      img {
+        width: 15px;
+        margin: auto;
+      }
+    }
+  }
+}

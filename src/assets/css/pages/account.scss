@@ -1,5 +1,10 @@
 .section-account {
   .account-sidebar {
+    .avatar {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 25px;
+    }
     .tab-group {
       display: block;
       border: none;
@@ -19,11 +24,74 @@
         }
       }
     }
+    .info-item {
+      padding: 8px 0;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid $border;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: block;
+        flex: 1;
+      }
+      img {
+        flex: 0 0 20px;
+        max-width: 20px;
+        margin-right: 10px;
+      }
+    }
   }
 
   .form-upload.avatar-upload {
     @media (max-width: 991px) {
       max-width: 180px;
+    }
+  }
+
+  .account-overview-wrapper {
+    margin-bottom: 15px;
+    .overview-item {
+      border-radius: 8px;
+      padding: 0 16px;
+      height: 140px;
+      flex: 0 0 calc(100% / 3 - 10px);
+      max-width: calc(100% / 3 - 10px);
+      @media (max-width: 575px) {
+        margin-bottom: 15px;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      &.blue {
+        background: #2D9CDB;
+      }
+      &.orange {
+        background: #F2994A;
+      }
+      &.red {
+        background: #EB5757;
+      }
+      .item-header {
+        margin-bottom: 10px;
+        .item-number {
+          color: $white;
+          font-size: 24px;
+          font-weight: bold;
+        }
+        .item-icon {
+          width: 30px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .item-des {
+        font-size: 15px;
+        color: $white;
+      }
     }
   }
 }
