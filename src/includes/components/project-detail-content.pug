@@ -50,23 +50,24 @@
       .col-sm-6
         .hire-col
           p.hire-title Số tiền vay
-          .hire-label.d-flex.justify-content-between 
-            p 2,000,000,000
+          .hire-label.align-items-center.d-flex.justify-content-between 
+            input(type="text" placeholder="Số tiền vay")
             p.orange VNĐ
 
           p.hire-title Thời gian vay tiền
-          .hire-label.d-flex.justify-content-between 
-            p 20
+          .hire-label.align-items-center.d-flex.justify-content-between 
+            input(type="text" placeholder="Thời gian vay tiền")
             p.orange Năm
 
           p.hire-title Lãi suất vay
-          .hire-label.d-flex.justify-content-between 
-            p 5
+          .hire-label.align-items-center.d-flex.justify-content-between 
+            input(type="text" placeholder="Lãi suất vay")
             p.orange %/năm
 
           p.hire-title Loại hình vay
-          .hire-label.d-flex.justify-content-between 
-            p Trả lãi chia đều
+          .hire-label.align-items-center.d-flex.justify-content-between
+            select
+              option(value="#") Trả lãi chia đều
       .col-sm-6
         .hire-col.hire-overview 
           p Số tiền hàng tháng phải trả

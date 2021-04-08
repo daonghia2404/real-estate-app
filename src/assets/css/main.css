@@ -2507,8 +2507,16 @@ section.selling-page .selling-page-wrapper {
 .section-project-detail .project-detail-card .hire-wrapper .hire-col .hire-label {
   border-radius: 8px;
   border: 1px solid #D4D4D4;
-  padding: 10px 15px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding-right: 15px; }
+  .section-project-detail .project-detail-card .hire-wrapper .hire-col .hire-label input, .section-project-detail .project-detail-card .hire-wrapper .hire-col .hire-label select {
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    width: 100%; }
+  .section-project-detail .project-detail-card .hire-wrapper .hire-col .hire-label select {
+    appearance: none; }
   .section-project-detail .project-detail-card .hire-wrapper .hire-col .hire-label p {
     font-weight: bold;
     color: #4A4A4A; }
