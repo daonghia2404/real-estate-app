@@ -123,6 +123,29 @@ form.custom-style-form {
 			}
 		}
 
+		&.six-four {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+
+			.form-item {
+				&:nth-of-type(1) {
+					flex: 0 0 calc(60% - 5px);
+					max-width: calc(60% - 5px);
+				}
+				&:nth-of-type(2) {
+					flex: 0 0 calc(40% - 5px);
+					max-width: calc(40% - 5px);
+				}
+
+				@media (max-width: 575px) {
+					flex: 0 0 100% !important;
+					max-width: 100% !important;
+				}
+			}
+		}
+
 		.form-item {
 			margin-bottom: 10px;
 

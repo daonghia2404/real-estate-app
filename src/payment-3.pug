@@ -1,0 +1,34 @@
+extends includes/layout/authen-layout.pug
+block pages 
+  include includes/components/button.pug
+  - const page = 'payment'
+  section.section.section-account 
+    .container 
+      .section-wrapper.d-flex.align-items-center.flex-column
+        form(action="#").payment-step.project-detail-card.payment-step-3.custom-style-form
+          each item, index in ['Pay online via Stripe', 'Pay online via PayPal', 'Online payment via MOMO', 'Cash on delivery (COD)', 'Bank transfer']
+            .payment-method.d-flex.align-items-center.flex-wrap
+              if index === 0
+                input(type="radio" name="payment-method" id=`${item}` checked)
+              else
+                input(type="radio" name="payment-method" id=`${item}`)
+              
+              label(for=`${item}`)= item
+
+              .form-payment-wrapper 
+                .form-group.six-four
+                  .form-item 
+                    .form-input 
+                      input(type="text" placeholder="Card Number")
+                  .form-item 
+                    .form-input 
+                      input(type="text" placeholder="MM/YY")
+                .form-group.six-four
+                  .form-item 
+                    .form-input 
+                      input(type="text" placeholder="Full Name")
+                  .form-item 
+                    .form-input 
+                      input(type="password" placeholder="CVV")
+
+        +button('button', 'Purchase', '', 'yellow payment-checkout big bold no-radius uppercase')

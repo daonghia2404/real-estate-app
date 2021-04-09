@@ -26,6 +26,12 @@
       font-weight: bold;
     }
   }
+
+  &.uppercase {
+    .button-title {
+      text-transform: uppercase;
+    }
+  }
   
   &.big {
     padding: 10px 15px;

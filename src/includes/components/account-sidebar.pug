@@ -1,12 +1,12 @@
 .account-sidebar.project-detail-card
   h3.project-title Personal settings
   if page === 'payment'
-    .info-item.d-flex.align-items-center 
-      img(src="./assets/icons/icon-mail.svg", alt="")
-      span nguyenkientrung362@gmail.com
-    .info-item.d-flex.align-items-center 
-      img(src="./assets/icons/icon-calendar.svg", alt="")
-      span Joined April 05, 2021
+    a(href="#").info-item.d-flex.align-items-center 
+      img(src="./assets/icons/icon-user-outline.svg", alt="")
+      span Account Information
+    a(href="#").info-item.d-flex.align-items-center 
+      img(src="./assets/icons/icon-password.svg", alt="")
+      span Security
 
   else if page === 'overview'
     .avatar 
