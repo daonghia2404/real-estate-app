@@ -101,6 +101,7 @@ const owlCarousel = {
     this.setupHomeBannerCarousel()
     this.setupProjectBannerCarousel()
     this.setupPropertiesBannerCarousel()
+    this.setupContactBannerCarousel()
   },
   setupHomeBannerCarousel: function () {
     const carousel = $("#section-home-carousel").owlCarousel({
@@ -121,6 +122,30 @@ const owlCarousel = {
       nav: false,
       center: true,
       margin: 15,
+    });
+  },
+  setupContactBannerCarousel: function() {
+    const carousel = $("#section-contact-banner-carousel").owlCarousel({
+      responsive: {
+        0: {
+          items: 3
+        },
+        768: {
+          items: 5
+        },
+        1200: {
+          items: 9
+        },
+      },
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: true,
+      smartSpeed: 300,
+      dots: false,
+      nav: false,
+      center: true,
+      margin: 0,
     });
   },
   setupProjectBannerCarousel: function() {
