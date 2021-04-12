@@ -1412,6 +1412,54 @@ section.section-banner {
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical; }
 
+.component-pagination .pagination {
+  text-align: center; }
+
+.component-pagination ul {
+  padding: 0; }
+  .component-pagination ul .pagination-list-btn {
+    padding: 0; }
+    .component-pagination ul .pagination-list-btn a svg:hover path {
+      fill: #fff; }
+  .component-pagination ul li {
+    display: inline-block;
+    margin: 0 4px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #D4D4D4; }
+    .component-pagination ul li.bg-none {
+      background: none;
+      border: none; }
+      .component-pagination ul li.bg-none img {
+        transform: translateY(2px); }
+    .component-pagination ul li a {
+      display: block;
+      margin: auto;
+      text-decoration: none;
+      color: #4A4A4A;
+      width: 100%;
+      height: 100%;
+      font-size: 12px;
+      line-height: 21px;
+      font-weight: 400;
+      user-select: none;
+      height: 24px;
+      min-width: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .component-pagination ul li a img {
+        width: 12px;
+        height: 7px; }
+    .component-pagination ul li:hover, .component-pagination ul li.active {
+      background: #172B74; }
+      .component-pagination ul li:hover a, .component-pagination ul li.active a {
+        color: #fff; }
+    .component-pagination ul li.active a {
+      font-weight: 600; }
+  .component-pagination ul li:first-child {
+    margin-left: 0; }
+
 header.header {
   background: #172B74; }
   header.header .header-wrapper {
